@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { ContactForm } from "@/components/site/contact-form";
 import { PageIntro } from "@/components/site/page-intro";
-import { ArrowUpRightIcon, MailIcon, MapPinIcon } from "@/components/ui/icons";
+import {
+  ArrowUpRightIcon,
+  LinkedinIcon,
+  MailIcon,
+  MapPinIcon,
+} from "@/components/ui/icons";
 import { profile } from "@/lib/portfolio-data";
+import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -13,35 +18,62 @@ export default function ContactPage() {
   return (
     <main className="shell page">
       <PageIntro
-        description="Have a role, project, or useful problem in mind? Send a short note. I read every message and will reply as soon as I can."
+        description="Have a role, project, or useful problem in mind? Email me directly and tell me a little about it."
         eyebrow="Contact"
         title="Let’s talk."
       />
 
-      <div className="contact-layout">
-        <aside className="contact-aside">
-          <div>
-            <p className="eyebrow">Direct</p>
-            <a className="contact-direct-link" href={`mailto:${profile.email}`}>
+      <section className={styles.contactPanel}>
+        <div className={styles.contactCopy}>
+          <p className="eyebrow">Direct contact</p>
+          <h2>Email is the best way to reach me.</h2>
+          <p>
+            Whether it is an opportunity, a collaboration, or a useful problem
+            to solve, a short introduction is enough to start.
+          </p>
+          <div className={styles.contactActions}>
+            <a
+              className="button button--primary"
+              href={`mailto:${profile.email}`}
+            >
               <MailIcon />
-              <span>{profile.email}</span>
+              Email me
+              <ArrowUpRightIcon />
+            </a>
+            <a
+              className="button"
+              href={profile.linkedin}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <LinkedinIcon />
+              LinkedIn
               <ArrowUpRightIcon />
             </a>
           </div>
-          <div className="contact-location">
-            <MapPinIcon />
-            <p>
-              Based in {profile.location}
-              <span>Available for remote and Metro Manila opportunities.</span>
-            </p>
+          <a className={styles.emailAddress} href={`mailto:${profile.email}`}>
+            {profile.email}
+          </a>
+        </div>
+
+        <dl className={styles.contactDetails}>
+          <div>
+            <dt>
+              <MapPinIcon />
+              Location
+            </dt>
+            <dd>{profile.location}</dd>
+            <dd>Open to remote and Metro Manila opportunities.</dd>
           </div>
-          <p className="contact-aside__note">
-            The form sends through a small server route. If it is not configured
-            yet, the direct email link always works.
-          </p>
-        </aside>
-        <ContactForm />
-      </div>
+          <div>
+            <dt>
+              <MailIcon />
+              Response
+            </dt>
+            <dd>I usually reply within one to two days.</dd>
+          </div>
+        </dl>
+      </section>
     </main>
   );
 }

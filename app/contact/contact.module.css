@@ -1,0 +1,116 @@
+.contactPanel {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+}
+
+.contactCopy {
+  padding: clamp(30px, 6vw, 58px);
+}
+
+.contactCopy h2 {
+  max-width: 560px;
+  margin-bottom: 16px;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.contactCopy > p:not(:global(.eyebrow)) {
+  max-width: 590px;
+  margin-bottom: 28px;
+  color: var(--foreground-muted);
+  line-height: 1.7;
+}
+
+.contactActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.emailAddress {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 24px;
+  overflow: hidden;
+  color: var(--foreground-subtle);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  transition: color var(--duration-fast) var(--ease-default);
+}
+
+.emailAddress:hover {
+  color: var(--brand-strong);
+}
+
+.contactDetails {
+  display: grid;
+  margin: 0;
+  border-left: 1px solid var(--border);
+}
+
+.contactDetails > div {
+  padding: 30px;
+}
+
+.contactDetails > div + div {
+  border-top: 1px solid var(--border);
+}
+
+.contactDetails dt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 13px;
+  color: var(--foreground);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.contactDetails dt svg {
+  color: var(--foreground-muted);
+}
+
+.contactDetails dd {
+  margin: 0;
+  color: var(--foreground-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.contactDetails dd + dd {
+  margin-top: 4px;
+  color: var(--foreground-subtle);
+}
+
+@media (max-width: 720px) {
+  .contactPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .contactDetails {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .contactCopy,
+  .contactDetails > div {
+    padding: 26px;
+  }
+
+  .contactActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contactActions :global(.button) {
+    width: 100%;
+  }
+}
