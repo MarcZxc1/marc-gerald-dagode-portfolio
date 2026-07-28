@@ -17,6 +17,11 @@
   --brand-wash: rgba(47, 129, 247, 0.12);
   --success: #3fb950;
   --success-wash: rgba(46, 160, 67, 0.15);
+  --contribution-0: #21262d;
+  --contribution-1: #0e4429;
+  --contribution-2: #006d32;
+  --contribution-3: #26a641;
+  --contribution-4: #39d353;
   --danger: #f85149;
   --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.22);
   --shadow-elevated: 0 16px 50px rgba(0, 0, 0, 0.34);
@@ -43,6 +48,11 @@
   --brand-wash: rgba(9, 105, 218, 0.08);
   --success: #1a7f37;
   --success-wash: rgba(26, 127, 55, 0.1);
+  --contribution-0: #ebedf0;
+  --contribution-1: #9be9a8;
+  --contribution-2: #40c463;
+  --contribution-3: #30a14e;
+  --contribution-4: #216e39;
   --danger: #cf222e;
   --shadow-card: 0 10px 30px rgba(31, 35, 40, 0.07);
   --shadow-elevated: 0 16px 44px rgba(31, 35, 40, 0.12);
@@ -1917,6 +1927,171 @@ body:has(.document-stage) .site-footer {
 .resume-proof span {
   color: var(--foreground-muted);
   font-size: 10px;
+}
+
+.github-contributions {
+  --contribution-size: 7px;
+  margin-bottom: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.github-contributions__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 13px;
+}
+
+.github-contributions__heading h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 670;
+  letter-spacing: -0.02em;
+}
+
+.github-contributions__heading .document-more {
+  min-height: 30px;
+}
+
+.contribution-calendar {
+  overflow: hidden;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--canvas);
+}
+
+.contribution-calendar__scroll {
+  overflow-x: auto;
+  scrollbar-color: var(--border) transparent;
+  scrollbar-width: thin;
+}
+
+.contribution-calendar__inner {
+  width: max-content;
+  min-width: 100%;
+}
+
+.contribution-calendar__months {
+  display: grid;
+  height: 15px;
+  margin-left: 26px;
+  gap: 2px;
+  color: var(--foreground-subtle);
+  font-size: 8px;
+  line-height: 1;
+}
+
+.contribution-calendar__months span {
+  width: max-content;
+}
+
+.contribution-calendar__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.contribution-calendar__weekdays {
+  position: relative;
+  width: 18px;
+  height: calc((var(--contribution-size) * 7) + 12px);
+  flex: 0 0 18px;
+  color: var(--foreground-subtle);
+  font-size: 8px;
+  line-height: var(--contribution-size);
+}
+
+.contribution-calendar__weekdays span {
+  position: absolute;
+  right: 0;
+}
+
+.contribution-calendar__weekdays span:nth-child(1) {
+  top: calc(var(--contribution-size) + 2px);
+}
+
+.contribution-calendar__weekdays span:nth-child(2) {
+  top: calc((var(--contribution-size) + 2px) * 3);
+}
+
+.contribution-calendar__weekdays span:nth-child(3) {
+  top: calc((var(--contribution-size) + 2px) * 5);
+}
+
+.contribution-calendar__grid {
+  display: grid;
+  width: max-content;
+  gap: 2px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, var(--contribution-size));
+}
+
+.contribution-calendar__day,
+.contribution-calendar__footer i {
+  display: block;
+  width: var(--contribution-size);
+  height: var(--contribution-size);
+  border: 1px solid color-mix(in srgb, var(--foreground) 5%, transparent);
+  border-radius: 2px;
+  background: var(--contribution-0);
+}
+
+.contribution-calendar__day[data-level="1"],
+.contribution-calendar__footer i[data-level="1"] {
+  background: var(--contribution-1);
+}
+
+.contribution-calendar__day[data-level="2"],
+.contribution-calendar__footer i[data-level="2"] {
+  background: var(--contribution-2);
+}
+
+.contribution-calendar__day[data-level="3"],
+.contribution-calendar__footer i[data-level="3"] {
+  background: var(--contribution-3);
+}
+
+.contribution-calendar__day[data-level="4"],
+.contribution-calendar__footer i[data-level="4"] {
+  background: var(--contribution-4);
+}
+
+.contribution-calendar__day--empty {
+  visibility: hidden;
+}
+
+.contribution-calendar__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 10px;
+  color: var(--foreground-subtle);
+  font-size: 8px;
+}
+
+.contribution-calendar__footer > div {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.contribution-calendar__footer i {
+  width: 8px;
+  height: 8px;
+}
+
+.contribution-calendar--status {
+  display: flex;
+  min-height: 88px;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground-subtle);
+  font-size: 10px;
+  text-align: center;
 }
 
 .resume-closing {

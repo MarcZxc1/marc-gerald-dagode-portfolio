@@ -17,6 +17,7 @@ this comment with:
 
 - A4-inspired résumé layout with focused secondary pages
 - GitHub-dark default theme with persistent light mode
+- Live, responsive GitHub contribution calendar
 - Responsive mobile and printable layouts
 - Selected project case summaries and verified Qwykz metrics
 - Dedicated Work, Toolkit, About, and Contact pages
@@ -44,5 +45,3 @@ this comment with:
 | `/skills` | Full technical toolkit |
 | `/about` | Background, education, and leadership |
 | `/contact` | Contact form and direct email |
-
-

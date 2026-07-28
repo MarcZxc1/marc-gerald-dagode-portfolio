@@ -7,6 +7,7 @@ import {
   MailIcon,
   MapPinIcon,
 } from "@/components/ui/icons";
+import { GitHubContributions } from "@/components/site/github-contributions";
 import { ResumeProject } from "@/components/site/resume-project";
 import {
   featuredProjects,
@@ -167,6 +168,11 @@ export default function Home() {
                 <span>GitHub clones · 131 unique cloners</span>
               </div>
             </section>
+
+            <GitHubContributions
+              profileUrl={profile.github}
+              username={profile.handle}
+            />
 
             <section className="resume-closing">
               <div>
