@@ -40,8 +40,10 @@ export async function POST(request: Request) {
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
+        Accept: "application/json",
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
+        "User-Agent": "marc-dagode-portfolio/1.0",
       },
       body: JSON.stringify({
         from: sender,
@@ -54,9 +56,29 @@ export async function POST(request: Request) {
     });
 
     if (!resendResponse.ok) {
-      throw new Error("Email provider rejected the request.");
+      const providerMessage = await resendResponse.text();
+
+      console.error("Resend rejected the portfolio contact email.", {
+        response: providerMessage.slice(0, 500),
+        status: resendResponse.status,
+      });
+
+      return NextResponse.json(
+        {
+          message:
+            "The email service rejected the message. Please email Marc directly.",
+        },
+        { status: 502 },
+      );
     }
-  } catch {
+  } catch (error) {
+    console.error(
+      "The portfolio contact email request failed.",
+      error instanceof Error
+        ? { message: error.message, name: error.name }
+        : { message: "Unknown request failure." },
+    );
+
     return NextResponse.json(
       { message: "The message could not be sent. Please email Marc directly." },
       { status: 502 },
