@@ -39,6 +39,7 @@
   ],
   "exclude": [
     "node_modules",
-    "__tests__"
+    "__tests__",
+    "Business-Virtual-Assistant-"
   ]
 }

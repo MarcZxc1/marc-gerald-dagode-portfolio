@@ -42,6 +42,9 @@ pnpm-debug.log*
 /.agents/
 /.qwykz-manifest.json
 
+# Local reference repositories
+/Business-Virtual-Assistant-/
+
 # Editor files
 /.idea/
 /.vscode/

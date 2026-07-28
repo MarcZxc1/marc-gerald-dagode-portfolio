@@ -47,16 +47,16 @@ export const featuredProjects = [
   {
     slug: "business-virtual-assistant",
     name: "Business Virtual Assistant",
-    kicker: "AI-assisted operations",
+    kicker: "Software Engineering team project",
     summary:
-      "A business management platform combining inventory workflows, AI-assisted restocking, and multi-platform integrations.",
+      "A team project for our Software Engineering course where I served as lead developer, owning marketplace integrations and the AI/ML features for inventory risk, forecasting, and restocking.",
     highlights: [
-      "Inventory and operations workflows",
-      "AI-powered restocking support",
-      "Public full-stack deployment",
+      "Led full-stack delivery across React, Express, PostgreSQL, and FastAPI services",
+      "Led AI/ML features for inventory risk scoring, demand forecasts, and budget-aware restocking",
+      "Integrated Shopee and Lazada authentication, data synchronization, and real-time order workflows",
     ],
-    stack: ["TypeScript", "React", "Next.js", "AI"],
-    status: "Shipped",
+    stack: ["TypeScript", "React", "Express", "Python", "FastAPI", "PostgreSQL"],
+    status: "Completed",
     year: "2025",
     href: "https://github.com/MarcZxc1/Business-Virtual-Assistant-",
   },
