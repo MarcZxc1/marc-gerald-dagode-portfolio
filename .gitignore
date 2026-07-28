@@ -1,0 +1,60 @@
+# Dependencies
+/node_modules/
+/.pnp/
+.pnp.*
+
+# Next.js build output
+/.next/
+/.next-build/
+/out/
+/build/
+
+# Test output
+/coverage/
+/playwright-report/
+/test-results/
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+
+# Deployment providers
+/.vercel/
+/.netlify/
+
+# TypeScript and tooling caches
+*.tsbuildinfo
+next-env.d.ts
+/.turbo/
+/.cache/
+
+# Debug logs
+*.log
+bun-error.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local AI and scaffold configuration
+/.codex/
+/.agents/
+/.qwykz-manifest.json
+
+# Editor files
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Private certificates and keys
+*.pem
+*.key
+*.p12
+*.pfx
