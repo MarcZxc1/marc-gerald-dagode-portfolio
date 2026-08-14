@@ -1,4 +1,5 @@
-import { ArrowUpRightIcon } from "@/components/ui/icons";
+import Link from "next/link";
+import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/ui/icons";
 import { featuredProjects } from "@/lib/portfolio-data";
 
 type Project = (typeof featuredProjects)[number];
@@ -9,8 +10,20 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ detailed = false, project }: ProjectCardProps) {
+  const hasCaseStudy = Boolean(project.caseStudyHref);
+
   return (
-    <article className="project-card" data-slot="project-card">
+    <article
+      className={`project-card${hasCaseStudy ? " project-card--case-study" : ""}`}
+      data-slot="project-card"
+    >
+      {project.caseStudyHref ? (
+        <Link
+          aria-label={`Read the ${project.name} case study`}
+          className="project-card__cover-link"
+          href={project.caseStudyHref}
+        />
+      ) : null}
       <div className="project-card__topline">
         <span className="project-card__status">
           <span aria-hidden="true" />
@@ -20,10 +33,14 @@ export function ProjectCard({ detailed = false, project }: ProjectCardProps) {
       </div>
       <p className="project-card__kicker">{project.kicker}</p>
       <h3>
-        <a href={project.href} rel="noreferrer" target="_blank">
-          {project.name}
-          <ArrowUpRightIcon />
-        </a>
+        {hasCaseStudy ? (
+          project.name
+        ) : (
+          <a href={project.href} rel="noreferrer" target="_blank">
+            {project.name}
+            <ArrowUpRightIcon />
+          </a>
+        )}
       </h3>
       <p className="project-card__summary">{project.summary}</p>
       {detailed ? (
@@ -38,6 +55,12 @@ export function ProjectCard({ detailed = false, project }: ProjectCardProps) {
           <li key={technology}>{technology}</li>
         ))}
       </ul>
+      {hasCaseStudy ? (
+        <span aria-hidden="true" className="project-card__cta">
+          Read case study
+          <ArrowRightIcon />
+        </span>
+      ) : null}
     </article>
   );
 }

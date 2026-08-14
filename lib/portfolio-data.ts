@@ -27,6 +27,7 @@ export const featuredProjects = [
     status: "Shipped",
     year: "2026",
     href: "https://github.com/MarcZxc1/qwykz",
+    caseStudyHref: "/projects/qwykz",
   },
   {
     slug: "diffguard",
@@ -43,6 +44,7 @@ export const featuredProjects = [
     status: "In progress",
     year: "2026",
     href: "https://github.com/MarcZxc1/diffguard",
+    caseStudyHref: null,
   },
   {
     slug: "business-virtual-assistant",
@@ -59,6 +61,7 @@ export const featuredProjects = [
     status: "Completed",
     year: "2025",
     href: "https://github.com/MarcZxc1/Business-Virtual-Assistant-",
+    caseStudyHref: null,
   },
   {
     slug: "home-repair-platform",
@@ -75,6 +78,7 @@ export const featuredProjects = [
     status: "Built",
     year: "2025",
     href: "https://github.com/MarcZxc1/Home-Repair-Service-Platform",
+    caseStudyHref: null,
   },
 ] as const;
 
