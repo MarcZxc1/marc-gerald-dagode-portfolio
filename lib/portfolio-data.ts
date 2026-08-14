@@ -41,7 +41,7 @@ export const featuredProjects = [
       "PostgreSQL/Prisma persistence with Redis-backed processing",
     ],
     stack: ["TypeScript", "Express", "Bun", "PostgreSQL", "Redis", "Docker"],
-    status: "In progress",
+    status: "Shipped",
     year: "2026",
     href: "https://github.com/MarcZxc1/diffguard",
     caseStudyHref: null,
@@ -57,7 +57,14 @@ export const featuredProjects = [
       "Led AI/ML features for inventory risk scoring, demand forecasts, and budget-aware restocking",
       "Integrated Shopee and Lazada authentication, data synchronization, and real-time order workflows",
     ],
-    stack: ["TypeScript", "React", "Express", "Python", "FastAPI", "PostgreSQL"],
+    stack: [
+      "TypeScript",
+      "React",
+      "Express",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+    ],
     status: "Completed",
     year: "2025",
     href: "https://github.com/MarcZxc1/Business-Virtual-Assistant-",
@@ -85,32 +92,47 @@ export const featuredProjects = [
 export const skillGroups = [
   {
     title: "Languages",
-    description: "The foundation I use to move between product interfaces, services, and data.",
+    description:
+      "The foundation I use to move between product interfaces, services, and data.",
     skills: ["TypeScript", "JavaScript", "Python", "SQL", "Bash (basic)"],
   },
   {
     title: "Frontend",
-    description: "Accessible, responsive interfaces with a preference for simple systems.",
+    description:
+      "Accessible, responsive interfaces with a preference for simple systems.",
     skills: ["React", "Next.js", "HTML", "CSS", "Tailwind CSS"],
   },
   {
     title: "Backend & APIs",
-    description: "Secure APIs, application logic, validation, and hands-on endpoint testing.",
-    skills: ["Bun", "Node.js", "FastAPI", "Bruno", "Postman", "Express", "Django", "REST APIs"],
+    description:
+      "Secure APIs, application logic, validation, and hands-on endpoint testing.",
+    skills: [
+      "Bun",
+      "Node.js",
+      "FastAPI",
+      "Bruno",
+      "Postman",
+      "Express",
+      "Django",
+      "REST APIs",
+    ],
   },
   {
     title: "Data",
-    description: "Relational data modeling, geospatial workloads, caching, and type-safe access.",
+    description:
+      "Relational data modeling, geospatial workloads, caching, and type-safe access.",
     skills: ["PostgreSQL", "PostGIS", "Supabase", "Prisma", "Redis"],
   },
   {
     title: "Delivery",
-    description: "Repeatable environments and feedback loops from local development to release.",
+    description:
+      "Repeatable environments and feedback loops from local development to release.",
     skills: ["Git", "GitHub Actions", "Docker", "Linux", "Vercel", "Render"],
   },
   {
     title: "Quality",
-    description: "Automated checks at the unit, integration, and browser levels.",
+    description:
+      "Automated checks at the unit, integration, and browser levels.",
     skills: ["Jest", "Vitest", "Pytest", "Playwright", "Zod"],
   },
 ] as const;
