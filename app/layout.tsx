@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://marczxc1.dev"),
   title: {
-    default: "Marc Gerald Dagode — Full-stack Developer",
+    default: "Marc Gerald Dagode",
     template: "%s · Marc Gerald Dagode",
   },
   description:
@@ -58,7 +58,9 @@ const themeScript = `
   }
 `;
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html data-theme="dark" lang="en" suppressHydrationWarning>
       <head>
