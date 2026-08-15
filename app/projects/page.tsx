@@ -7,7 +7,7 @@ import { featuredProjects, profile } from "@/lib/portfolio-data";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Selected software projects by Marc Dagode.",
+  description: "Selected software projects by Marc Gerald Dagode.",
 };
 
 export default function ProjectsPage() {

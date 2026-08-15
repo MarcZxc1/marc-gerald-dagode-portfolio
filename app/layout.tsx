@@ -7,8 +7,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://marczxc1.dev"),
   title: {
-    default: "Marc Dagode — Full-stack Developer",
-    template: "%s · Marc Dagode",
+    default: "Marc Gerald Dagode — Full-stack Developer",
+    template: "%s · Marc Gerald Dagode",
   },
   description:
     "Portfolio of Marc Gerald Dagode, a full-stack developer building reliable web applications and developer tools.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     icon: "/icon.svg",
   },
   openGraph: {
-    title: "Marc Dagode — Full-stack Developer",
+    title: "Marc Gerald Dagode — Full-stack Developer",
     description:
       "Reliable web applications and developer tools, built with a product mindset.",
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Marc Dagode — Full-stack Developer",
+    title: "Marc Gerald Dagode — Full-stack Developer",
     description:
       "Reliable software, developer tooling, and thoughtful use of AI.",
     images: ["/marc-dagode-photo.png"],

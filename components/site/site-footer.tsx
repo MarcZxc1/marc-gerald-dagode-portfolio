@@ -7,7 +7,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell site-footer__inner">
         <div>
-          <p className="site-footer__name">Marc Dagode</p>
+          <p className="site-footer__name">Marc Gerald Dagode</p>
           <p className="muted">Built with Next.js, TypeScript, and a little restraint.</p>
         </div>
         <div className="site-footer__links">

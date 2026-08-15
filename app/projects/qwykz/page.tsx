@@ -12,7 +12,7 @@ const project = featuredProjects.find(({ slug }) => slug === "qwykz")!;
 export const metadata: Metadata = {
   title: "Qwykz case study",
   description:
-    "Why Marc Dagode built Qwykz, and how the CLI makes project scaffolding faster without hiding important decisions.",
+    "Why Marc Gerald Dagode built Qwykz, and how the CLI makes project scaffolding faster without hiding important decisions.",
 };
 
 const decisions = [

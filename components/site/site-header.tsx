@@ -13,7 +13,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="shell site-header__inner">
-        <Link aria-label="Marc Dagode — home" className="brand" href="/">
+        <Link aria-label="Marc Gerald Dagode — home" className="brand" href="/">
           <span className="brand__mark">MD</span>
           <span className="brand__label">marc.dev</span>
         </Link>

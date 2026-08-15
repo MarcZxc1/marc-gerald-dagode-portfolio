@@ -7,7 +7,7 @@ import { profile, resumeTimeline } from "@/lib/portfolio-data";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Background, education, and leadership experience of Marc Dagode.",
+  description: "Background, education, and leadership experience of Marc Gerald Dagode.",
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
 
       <section className="about-profile">
         <Image
-          alt="Illustrated profile picture used by Marc Dagode"
+          alt="Illustrated profile picture used by Marc Gerald Dagode"
           className="about-profile__image"
           height={460}
           src="/marc-dagode-photo.png"

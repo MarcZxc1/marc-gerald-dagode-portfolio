@@ -11,7 +11,7 @@ import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a conversation with Marc Dagode.",
+  description: "Start a conversation with Marc Gerald Dagode.",
 };
 
 export default function ContactPage() {

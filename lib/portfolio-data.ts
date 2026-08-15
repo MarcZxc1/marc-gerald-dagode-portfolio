@@ -1,6 +1,6 @@
 export const profile = {
   name: "Marc Gerald Dagode",
-  shortName: "Marc Dagode",
+  shortName: "Marc Gerald Dagode",
   handle: "MarcZxc1",
   role: "Full-stack developer",
   location: "Quezon City, Philippines",

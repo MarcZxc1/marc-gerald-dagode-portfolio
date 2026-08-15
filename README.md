@@ -1,4 +1,4 @@
-# Marc Dagode Portfolio
+# Marc Gerald Dagode Portfolio
 
 A compact, A4-inspired portfolio and web résumé for Marc Gerald Dagode. It
 presents selected projects, technical skills, education, leadership, and civic
@@ -10,7 +10,7 @@ involvement without turning the homepage into a long landing page.
 After deployment, save a screenshot as docs/portfolio-preview.png and replace
 this comment with:
 
-![Marc Dagode portfolio preview](docs/portfolio-preview.png)
+![Marc Gerald Dagode portfolio preview](docs/portfolio-preview.png)
 -->
 
 ## Features
