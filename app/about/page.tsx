@@ -66,6 +66,10 @@ export default function AboutPage() {
           LinkedIn
           <ArrowUpRightIcon />
         </a>
+        <a href="/marc-dagode-resume.pdf" rel="noreferrer" target="_blank">
+          Resume
+          <ArrowUpRightIcon />
+        </a>
       </section>
     </main>
   );

@@ -5,6 +5,7 @@ import {
   LinkedinIcon,
   MailIcon,
   MapPinIcon,
+  DownloadIcon,
 } from "@/components/ui/icons";
 import { profile } from "@/lib/portfolio-data";
 import styles from "./contact.module.css";
@@ -48,6 +49,16 @@ export default function ContactPage() {
             >
               <LinkedinIcon />
               LinkedIn
+              <ArrowUpRightIcon />
+            </a>
+            <a
+              className="button"
+              href="/marc-dagode-resume.pdf"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <DownloadIcon />
+              Resume
               <ArrowUpRightIcon />
             </a>
           </div>

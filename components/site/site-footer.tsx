@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/ui/icons";
+import { GithubIcon, LinkedinIcon, MailIcon, DownloadIcon } from "@/components/ui/icons";
 import { profile } from "@/lib/portfolio-data";
 
 export function SiteFooter() {
@@ -20,6 +20,9 @@ export function SiteFooter() {
           <Link aria-label="Send an email" href="/contact">
             <MailIcon />
           </Link>
+          <a aria-label="Resume" href="/marc-dagode-resume.pdf" rel="noreferrer" target="_blank">
+            <DownloadIcon />
+          </a>
         </div>
       </div>
     </footer>

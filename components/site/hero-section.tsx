@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GithubIcon, LinkedinIcon, MailIcon, ArrowRightIcon } from "@/components/ui/icons";
+import { GithubIcon, LinkedinIcon, MailIcon, ArrowRightIcon, ArrowUpRightIcon } from "@/components/ui/icons";
 import { profile } from "@/lib/portfolio-data";
 
 export function HeroSection() {
@@ -39,6 +39,10 @@ export function HeroSection() {
             Let&apos;s work together
             <ArrowRightIcon />
           </Link>
+          <a href="/marc-dagode-resume.pdf" target="_blank" rel="noreferrer" className="button">
+            Resume
+            <ArrowUpRightIcon />
+          </a>
           <div className="flex items-center gap-1.5 ms-[6px]">
              <a href={profile.github} rel="noreferrer" target="_blank" className="icon-button" aria-label="GitHub">
               <GithubIcon />
