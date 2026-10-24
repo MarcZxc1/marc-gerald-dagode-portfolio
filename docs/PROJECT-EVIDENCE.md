@@ -46,24 +46,52 @@ not imply a locked transitive dependency graph.
 
 ## Qwykz potential AI output-token savings
 
-- Source: the same clean Qwykz 1.4.7 commit and Express preset as the walkthrough.
-- Capture: `public/evidence/qwykz-token-estimate.json`.
+- Source: the same clean Qwykz 1.4.7 commit as the walkthrough; curated preset
+  defaults are resolved directly from that source's preset catalog.
+- Capture: `public/evidence/qwykz-token-estimates.json`.
 - Script: `scripts/capture-qwykz-tokens.mjs`.
 - Tokenizer: `js-tiktoken@1.0.21`, encoding `cl100k_base`.
-- Result: **3,109 tokens across 17 files**, displayed as **approximately 3,100**.
+- Coverage: **16 of 17 curated presets measured**, approximately **2,800–6,000
+  tokens per scaffold** after rounding each count to the nearest hundred.
+- Laravel is explicitly unmeasured: its generator invokes Composer to download an
+  unpinned upstream starter and dependencies, outside this bundled-template capture.
 - Method: tokenize each included file's full content and sum the counts. Include
-  source, tests, package declarations, Prisma, TypeScript, and Docker configuration.
-  Exclude `.env`, `.qwykz-manifest.json`, `AGENTS.md`, and `LEARN.md`.
-- Reproducibility: fix the database port at 54321 and Redis port at 63790; replace
-  the randomly generated Docker password with `<placeholder>` before tokenizing.
-  The snapshot records per-file counts and SHA-256 hashes of normalized content.
+  source, tests, static assets, package declarations, and configuration. Exclude
+  Markdown documentation, `.qwykz-manifest.json`, `.env`, and `.env.*` at every
+  directory depth, including frontend/backend subprojects.
+- Reproducibility: use `portfolio-api` as the project name, fix the database port
+  at 54321 and Redis port at 63790, and replace randomly generated Docker passwords
+  with `<placeholder>` before tokenizing. The snapshot records per-file counts
+  and SHA-256 hashes of normalized content. Two complete runs matched exactly.
+
+| Preset | Files counted | Tokens | Displayed estimate |
+| --- | ---: | ---: | ---: |
+| api-rust | 16 | 3,742 | ~3,700 |
+| api-go | 12 | 3,363 | ~3,400 |
+| api-python | 19 | 2,911 | ~2,900 |
+| api-elysia | 18 | 3,335 | ~3,300 |
+| api-hono | 18 | 3,425 | ~3,400 |
+| api-express | 17 | 3,109 | ~3,100 |
+| api-laravel | — | Unmeasured | — |
+| web-nextjs | 16 | 4,067 | ~4,100 |
+| web-react | 10 | 2,838 | ~2,800 |
+| web-vue | 10 | 2,856 | ~2,900 |
+| fullstack-react-rust | 25 | 6,032 | ~6,000 |
+| fullstack-react-go | 21 | 5,668 | ~5,700 |
+| fullstack-react-elysia | 27 | 5,725 | ~5,700 |
+| fullstack-react-hono | 27 | 5,798 | ~5,800 |
+| fullstack-react-express | 26 | 5,450 | ~5,500 |
+| fullstack-react-fastapi | 28 | 5,211 | ~5,200 |
+| fullstack-vue-hono | 27 | 5,786 | ~5,800 |
 
 This estimates potential output tokens avoided **if an AI would otherwise write
-the same scaffold files once**. It is not a measured AI-session comparison or a
-claim about total billable tokens, money, time, or every preset. Prompts, reasoning,
-retries, file paths, chat formatting, and tool overhead are outside the count.
-An AI may still read the generated files; different tokenizers produce different
-counts. No savings percentage is claimed.
+one preset's same scaffold files once**. Preset totals are alternatives, not
+cumulative savings for a single project. It is not a measured AI-session comparison
+or a claim about total billable tokens, money, time, arbitrary configurations, or
+application runtime correctness. Prompts, reasoning, retries, file paths, chat
+formatting, and tool overhead are outside the count. An AI may still read the
+generated files; different tokenizers produce different counts. No savings
+percentage is claimed.
 
 To reproduce, use a clean checkout of the recorded source commit. Install the
 measurement dependency in a temporary directory, outside the portfolio:
@@ -74,9 +102,12 @@ bun add --cwd "$capture_dir" js-tiktoken@1.0.21
 bun scripts/capture-qwykz-tokens.mjs /path/to/qwykz "$capture_dir/node_modules/js-tiktoken"
 ```
 
-The generator builds its plan in a temporary workspace and cleans it up; the
-script does not install scaffold dependencies or start a server. Only counts,
-hashes, and methodology are saved, with no generated credentials or file contents.
+The generator builds each plan in a temporary workspace and cleans it up; the
+script skips Laravel, does not install scaffold dependencies, and starts no server.
+Only counts, hashes, and methodology are saved, with no generated credentials or
+file contents. The original Express-only snapshot remains at
+`public/evidence/qwykz-token-estimate.json` as historical evidence; its 3,109-token
+count matches the expanded capture.
 
 ## Supply Chain Portal stock-concurrency case
 

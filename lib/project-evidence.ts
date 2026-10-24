@@ -1,10 +1,12 @@
-import qwykzTokenCapture from "@/public/evidence/qwykz-token-estimate.json";
+import qwykzTokenCapture from "@/public/evidence/qwykz-token-estimates.json";
 
 export const qwykzTokenEvidence = {
-  approximateTokens: qwykzTokenCapture.approximateTokens,
-  fileCount: qwykzTokenCapture.fileCount,
+  approximateMinTokens: qwykzTokenCapture.approximateMinTokens,
+  approximateMaxTokens: qwykzTokenCapture.approximateMaxTokens,
+  measuredPresetCount: qwykzTokenCapture.measuredPresetCount,
+  presets: qwykzTokenCapture.presets,
   encoding: qwykzTokenCapture.encoding,
-  snapshotHref: "/evidence/qwykz-token-estimate.json",
+  snapshotHref: "/evidence/qwykz-token-estimates.json",
 } as const;
 
 export const qwykzDownloadEvidence = {
