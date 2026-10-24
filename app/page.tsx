@@ -4,7 +4,7 @@ import { ExpertiseSection } from "@/components/site/expertise-section";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       <HeroSection />
       <SelectedWorkSection />
       <ExpertiseSection />

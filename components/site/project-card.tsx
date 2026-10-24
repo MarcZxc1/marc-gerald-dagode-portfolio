@@ -19,7 +19,7 @@ export function ProjectCard({ detailed = false, project }: ProjectCardProps) {
     >
       {project.caseStudyHref ? (
         <Link
-          aria-label={`Read the ${project.name} case study`}
+          aria-label={`Read the ${project.name} project notes`}
           className="project-card__cover-link"
           href={project.caseStudyHref}
         />
@@ -32,16 +32,18 @@ export function ProjectCard({ detailed = false, project }: ProjectCardProps) {
         <span>{project.year}</span>
       </div>
       <p className="project-card__kicker">{project.kicker}</p>
-      <h3>
+      <h2>
         {hasCaseStudy ? (
           project.name
-        ) : (
+        ) : project.href ? (
           <a href={project.href} rel="noreferrer" target="_blank">
             {project.name}
             <ArrowUpRightIcon />
           </a>
+        ) : (
+          project.name
         )}
-      </h3>
+      </h2>
       <p className="project-card__summary">{project.summary}</p>
       {detailed ? (
         <ul className="project-card__highlights">
@@ -57,7 +59,7 @@ export function ProjectCard({ detailed = false, project }: ProjectCardProps) {
       </ul>
       {hasCaseStudy ? (
         <span aria-hidden="true" className="project-card__cta">
-          Read case study
+          Read project notes
           <ArrowRightIcon />
         </span>
       ) : null}

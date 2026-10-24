@@ -1,15 +1,12 @@
 .contactPanel {
   display: grid;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  box-shadow: var(--shadow-card);
+  border-bottom: 1px solid var(--border);
+  background: transparent;
   grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
 }
 
 .contactCopy {
-  padding: clamp(30px, 6vw, 58px);
+  padding: 24px 48px 40px 0;
 }
 
 .contactCopy h2 {
@@ -38,11 +35,10 @@
   display: inline-block;
   max-width: 100%;
   margin-top: 24px;
-  overflow: hidden;
+  overflow-wrap: anywhere;
   color: var(--foreground-subtle);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 12px;
-  text-overflow: ellipsis;
   transition: color var(--duration-fast) var(--ease-default);
 }
 
@@ -102,7 +98,7 @@
 
   .contactCopy,
   .contactDetails > div {
-    padding: 26px;
+    padding: 26px 0;
   }
 
   .contactActions {

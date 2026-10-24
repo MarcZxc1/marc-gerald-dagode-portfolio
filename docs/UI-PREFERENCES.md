@@ -8,13 +8,15 @@ only when direct feedback establishes or reverses a preference.
 - Approved by Marc: A modern, bold typography hero style homepage.
 - GitHub-dark is the default theme; light mode remains available.
 - A dynamic, full-viewport landing experience with large, expressive typography for the hero section, while maintaining high readability.
+- Use a clean, professional web layout without A4 or résumé-sheet framing; preserve concise identity, project evidence, and progressively disclosed background.
+- Present the thesis project as Nutrimap.
 - Balanced information density: punchy, large text at the top of the homepage to grab attention, with essential portfolio evidence (like projects and skills) flowing naturally below.
 - Distinctive and editorial rather than a common portfolio template, with a focus on modern developer aesthetics.
 - Ladder/timeline treatment for progression and experience.
 - A visible profile picture is required (can be integrated into the hero or bio).
 - Motion is minimal, snappy, smooth, and reduced-motion safe.
 - Links expose only important information, with “more” paths to deeper pages.
-- SNUHI must not appear unless Marc explicitly requests it later.
+- Use Nutrimap as the public thesis project name; the previous project name must not appear.
 
 ## Avoid
 

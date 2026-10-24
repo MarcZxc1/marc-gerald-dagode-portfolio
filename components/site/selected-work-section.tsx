@@ -1,25 +1,59 @@
 import Link from "next/link";
-import { ArrowRightIcon } from "@/components/ui/icons";
-import { ProjectCard } from "@/components/site/project-card";
+import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/ui/icons";
 import { featuredProjects } from "@/lib/portfolio-data";
 
 export function SelectedWorkSection() {
   return (
-    <section className="shell py-24 border-t border-[var(--border)] animate-fade-in-up animation-delay-300">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+    <section
+      aria-labelledby="selected-work-title"
+      className="shell home-section"
+      id="selected-work"
+    >
+      <div className="section-heading">
         <div>
-          <p className="eyebrow mb-3">Selected Work</p>
-          <h3 className="text-3xl md:text-4xl font-bold tracking-tight">Projects built around real workflows.</h3>
+          <p className="eyebrow">01 / Selected work</p>
+          <h2 id="selected-work-title">Tools, products &amp; a thesis.</h2>
         </div>
-        <Link href="/projects" className="text-link">
-          All projects
-          <ArrowRightIcon />
+        <Link className="text-link" href="/projects">
+          All projects <ArrowRightIcon />
         </Link>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {featuredProjects.slice(0, 4).map((project) => (
-          <ProjectCard key={project.slug} project={project} detailed />
+      <div className="work-list">
+        {featuredProjects.slice(0, 3).map((project, index) => (
+          <article className="work-item" key={project.slug}>
+            <span aria-hidden="true" className="work-item__number">
+              0{index + 1}
+            </span>
+            <div className="work-item__identity">
+              <p className="work-item__category">{project.kicker}</p>
+              <h3>
+                <Link href={project.caseStudyHref!}>
+                  {project.name}
+                  <ArrowUpRightIcon />
+                </Link>
+              </h3>
+              <p className="work-item__status">
+                {project.status} <span aria-hidden="true">·</span>{" "}
+                {project.year}
+              </p>
+            </div>
+            <div className="work-item__detail">
+              <p>{project.summary}</p>
+              {project.slug === "qwykz" ? (
+                <p className="work-item__evidence">
+                  1,763 peak weekly npm downloads
+                </p>
+              ) : null}
+              <div className="work-item__bottom">
+                <span className="stack-line">
+                  {project.stack.slice(0, 3).join(" / ")}
+                </span>
+                <Link className="text-link" href={project.caseStudyHref!}>
+                  Project notes <ArrowRightIcon />
+                </Link>
+              </div>
+            </div>
+          </article>
         ))}
       </div>
     </section>
