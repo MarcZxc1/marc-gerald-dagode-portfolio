@@ -1319,6 +1319,47 @@ svg {
   flex-wrap: wrap;
   gap: 6px 24px;
 }
+.token-estimates {
+  margin-block: 24px;
+  border-block: 1px solid var(--border);
+  padding-block: 16px;
+}
+.token-estimates summary {
+  cursor: pointer;
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 600;
+}
+.token-estimates table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.token-estimates caption {
+  padding-bottom: 12px;
+  color: var(--foreground-subtle);
+  text-align: left;
+}
+.token-estimates th,
+.token-estimates td {
+  padding: 10px 6px;
+  border-bottom: 1px solid var(--border-muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.token-estimates th:first-child {
+  padding-left: 0;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.token-estimates tbody th {
+  font-weight: 400;
+}
+.token-estimates thead th {
+  color: var(--foreground-subtle);
+  font-weight: 500;
+}
 .evidence-note,
 .case-study__copy > .evidence-note {
   margin-top: 16px;

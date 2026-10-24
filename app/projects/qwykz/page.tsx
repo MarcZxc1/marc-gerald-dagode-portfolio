@@ -270,19 +270,51 @@ export default function QwykzCaseStudyPage() {
           <p>
             Using Qwykz could save an estimated{" "}
             <strong>
-              ~{qwykzTokenEvidence.approximateTokens.toLocaleString("en-US")} AI
-              output tokens per Express scaffold
+              ~{qwykzTokenEvidence.approximateMinTokens.toLocaleString("en-US")}–
+              {qwykzTokenEvidence.approximateMaxTokens.toLocaleString("en-US")} AI
+              output tokens per scaffold
             </strong>{" "}
             if an AI would otherwise write the same files once. The CLI creates
             the foundation so AI work can focus on application features.
           </p>
           <p>
-            The estimate counts the complete contents of{" "}
-            {qwykzTokenEvidence.fileCount} source, test, and configuration files
-            from the walkthrough’s Express preset using the{" "}
+            The range covers {qwykzTokenEvidence.measuredPresetCount} curated
+            presets: standalone APIs, web apps, and full-stack combinations. Each
+            estimate counts complete source, test, and configuration files using the{" "}
             <code>{qwykzTokenEvidence.encoding}</code> tokenizer. Generated
-            documentation, the manifest, and the environment file are excluded.
+            documentation, Qwykz manifests, and environment files are excluded.
           </p>
+          <details className="token-estimates">
+            <summary>Compare estimates by preset</summary>
+            <table>
+              <caption>Potential AI output tokens avoided per scaffold</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Preset</th>
+                  <th scope="col">Files</th>
+                  <th scope="col">Est. tokens</th>
+                </tr>
+              </thead>
+              <tbody>
+                {qwykzTokenEvidence.presets.map((preset) => (
+                  <tr key={preset.preset}>
+                    <th scope="row">{preset.preset.replaceAll("-", "\u200b-")}</th>
+                    <td>{preset.status === "measured" ? preset.fileCount : "—"}</td>
+                    <td>
+                      {preset.status === "measured"
+                        ? `~${preset.approximateTokens!.toLocaleString("en-US")}`
+                        : "Unmeasured"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="evidence-note">
+              Laravel is unmeasured because it downloads an unpinned upstream
+              starter through Composer. Counts reflect bundled templates in
+              Qwykz 1.4.7 and do not verify application runtime behavior.
+            </p>
+          </details>
           <a
             className="text-link"
             href={qwykzTokenEvidence.snapshotHref}

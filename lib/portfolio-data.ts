@@ -24,7 +24,7 @@ export const featuredProjects = [
       `${qwykzDownloadEvidence.peakDownloads.toLocaleString("en-US")} npm downloads · Jun 20–26, 2026`,
       "Reproducible CLI walkthrough with file, dependency, and manifest previews",
       "Reusable presets for Supabase, Clerk, and traditional auth",
-      `Estimated ~${qwykzTokenEvidence.approximateTokens.toLocaleString("en-US")} AI output tokens saved per Express scaffold if AI wrote the same files`,
+      `Estimated ~${qwykzTokenEvidence.approximateMinTokens.toLocaleString("en-US")}–${qwykzTokenEvidence.approximateMaxTokens.toLocaleString("en-US")} AI output tokens saved per scaffold across ${qwykzTokenEvidence.measuredPresetCount} presets if AI wrote the same files`,
     ],
     stack: ["TypeScript", "Bun", "npm", "GitHub"],
     status: "Shipped",

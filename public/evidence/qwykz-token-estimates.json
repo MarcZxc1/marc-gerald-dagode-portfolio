@@ -1,0 +1,2227 @@
+{
+  "capturedOn": "2026-10-24",
+  "version": "1.4.7",
+  "sourceCommit": "785a761de8e87521c4e36c0c4699c1318beaeecb",
+  "sourceUrl": "https://github.com/MarcZxc1/qwykz/tree/785a761de8e87521c4e36c0c4699c1318beaeecb",
+  "projectName": "portfolio-api",
+  "fixedPorts": {
+    "database": 54321,
+    "redis": 63790
+  },
+  "tokenizer": "js-tiktoken@1.0.21",
+  "encoding": "cl100k_base",
+  "method": "Sum token counts of each included file's complete content, with Docker passwords replaced by <placeholder>. Exclude Markdown documentation, Qwykz manifests, and environment files at every directory depth. No file paths, chat formatting, prompts, reasoning, retries, or tool overhead are counted.",
+  "interpretation": "Potential output tokens avoided per preset if an AI would otherwise write the same scaffold files once. This is a scaffold-size proxy, not measured savings from an AI session. Other tokenizers and workflows will differ; an AI may still read the generated files. These counts do not verify that the generated applications run.",
+  "measuredPresetCount": 16,
+  "approximateMinTokens": 2800,
+  "approximateMaxTokens": 6000,
+  "presets": [
+    {
+      "preset": "api-rust",
+      "category": "api",
+      "description": "Rust (Axum) API with Docker PostgreSQL and Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 16,
+      "totalTokens": 3742,
+      "approximateTokens": 3700,
+      "files": [
+        {
+          "path": ".dockerignore",
+          "characters": 57,
+          "sha256": "b53efa66a2e91759ec8e8f93210b8444455517ea39398da70f7017fb080257bd",
+          "tokens": 17
+        },
+        {
+          "path": "Cargo.toml",
+          "characters": 609,
+          "sha256": "2c09d8f3708a94e6ac53ddaef782f42e48a7bd68548842efcd4fb7b8b6c880b2",
+          "tokens": 217
+        },
+        {
+          "path": "docker-compose.yml",
+          "characters": 1428,
+          "sha256": "48f28535f2b5c492ea4bc5897cce9f45d34614c2735f2bb4a33851038b78a70c",
+          "tokens": 446
+        },
+        {
+          "path": "Dockerfile",
+          "characters": 700,
+          "sha256": "7c15e3c7dd1225a1fbbd9b2178c308f09bdd310dca0e93702490e1cb678db1d6",
+          "tokens": 226
+        },
+        {
+          "path": "migrations/20240101000000_init.sql",
+          "characters": 363,
+          "sha256": "ec926e6bd75c6c8a2ce3c85e1192af39d2991ccc3d1f378bf44b2d8c25062e8f",
+          "tokens": 91
+        },
+        {
+          "path": "src/api/handlers/auth.rs",
+          "characters": 4817,
+          "sha256": "b1004d52be90e2db2af381eac7b03a4fbd5d5dead99de0466e4b1c2b30a61bfc",
+          "tokens": 1196
+        },
+        {
+          "path": "src/api/handlers/health.rs",
+          "characters": 131,
+          "sha256": "46b6e1e3ba267964d4a3218660e34fbb2292c28a0fa12584fd914e46b8747483",
+          "tokens": 38
+        },
+        {
+          "path": "src/api/handlers/mod.rs",
+          "characters": 45,
+          "sha256": "899045d8a2be72fd8ad047d746a9c865e1d1702d0cba09c78b8dc0bde64c25b3",
+          "tokens": 12
+        },
+        {
+          "path": "src/api/handlers/users.rs",
+          "characters": 1369,
+          "sha256": "8aae096eb599a2ce0a45725c7544937219a9e72408c77b72c4af7e7e94db58c2",
+          "tokens": 346
+        },
+        {
+          "path": "src/api/middleware.rs",
+          "characters": 2035,
+          "sha256": "fc6da18b5b0cf70e088fa2db450398d6346b9935428a3bec3c68dd8ccc39a400",
+          "tokens": 435
+        },
+        {
+          "path": "src/api/mod.rs",
+          "characters": 147,
+          "sha256": "b79b70777f07a8df2cf189f6f2535f167e731a83f24017ade11d526a059b6602",
+          "tokens": 38
+        },
+        {
+          "path": "src/cache/mod.rs",
+          "characters": 15,
+          "sha256": "43d079b43d6c9953dbb4b99240bdac56c7da0868eeb45e2e92db86ac587ac1d3",
+          "tokens": 4
+        },
+        {
+          "path": "src/cache/redis.rs",
+          "characters": 212,
+          "sha256": "ed18ec51e7c4457ed11763563e9d07d3bdef170e47cb30a65332fc19da4d94e8",
+          "tokens": 58
+        },
+        {
+          "path": "src/db/mod.rs",
+          "characters": 16,
+          "sha256": "35f404d9b935503635b26860b67e7ceb73b4cfc443bd482278e30f0873becff7",
+          "tokens": 4
+        },
+        {
+          "path": "src/db/models.rs",
+          "characters": 578,
+          "sha256": "522588d847d7ebaffccf590036ecb8debcdab39e567af932ce1ab36639a3eb81",
+          "tokens": 152
+        },
+        {
+          "path": "src/main.rs",
+          "characters": 1826,
+          "sha256": "e1ae4cb7a21692adb9f57854a503ecf0e59fa48aeb9c700e72963633f3b03997",
+          "tokens": 462
+        }
+      ]
+    },
+    {
+      "preset": "api-go",
+      "category": "api",
+      "description": "Go (Fiber) API with Docker PostgreSQL and Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 12,
+      "totalTokens": 3363,
+      "approximateTokens": 3400,
+      "files": [
+        {
+          "path": ".dockerignore",
+          "characters": 87,
+          "sha256": "e97535aa42b6b125b2127abd41f730b1b8536d7a79576cebbd15600096fee8b3",
+          "tokens": 31
+        },
+        {
+          "path": "cmd/api/main.go",
+          "characters": 1363,
+          "sha256": "ceb57a181a35598df953ef9c3100eaeb4adbdf51e997c4f3c9879fcd5032d6aa",
+          "tokens": 355
+        },
+        {
+          "path": "docker-compose.yml",
+          "characters": 1428,
+          "sha256": "48f28535f2b5c492ea4bc5897cce9f45d34614c2735f2bb4a33851038b78a70c",
+          "tokens": 446
+        },
+        {
+          "path": "Dockerfile",
+          "characters": 634,
+          "sha256": "6368dc3ae67358b77df6942d9b374108d39dac34e2d8f149174ab47c755763ff",
+          "tokens": 216
+        },
+        {
+          "path": "go.mod",
+          "characters": 310,
+          "sha256": "310d488e47a81c9e3e0c4cfbe0d49650748c77f0092aa6878eb974bb4ab9d1a2",
+          "tokens": 132
+        },
+        {
+          "path": "internal/cache/redis.go",
+          "characters": 512,
+          "sha256": "947e9b81baea61d2f74b5a4757e3c86588e3e93d97f63c669d41acc056e6c608",
+          "tokens": 142
+        },
+        {
+          "path": "internal/database/database.go",
+          "characters": 597,
+          "sha256": "d60f675a27ed78b4480d5ee357e2fde026cff456190bfc3996a010b8fbf07841",
+          "tokens": 160
+        },
+        {
+          "path": "internal/handlers/auth.go",
+          "characters": 3691,
+          "sha256": "f79119bb41e8d18adac6bc9c4188cd20f8acbb63cded89ca0ba4049400a868b0",
+          "tokens": 977
+        },
+        {
+          "path": "internal/handlers/health.go",
+          "characters": 150,
+          "sha256": "42fdb7ca749519aa688c76daddc19e131e3101c5e057c94481bcd8533d7ac570",
+          "tokens": 46
+        },
+        {
+          "path": "internal/handlers/users.go",
+          "characters": 441,
+          "sha256": "63a9b41509c59308482464eb0da5a7ee457f34b2d6bdd1f4a4e9dffad08f8f39",
+          "tokens": 114
+        },
+        {
+          "path": "internal/middleware/auth.go",
+          "characters": 1888,
+          "sha256": "0db813342767cc8455c2f5a56f0a221f9ad605734ddf3dc4dccba0b1039529ff",
+          "tokens": 510
+        },
+        {
+          "path": "internal/models/user.go",
+          "characters": 838,
+          "sha256": "8e5c8846e96314e0bcffebd922949b5d619acbc138f858d92aa5cf82dffe235c",
+          "tokens": 234
+        }
+      ]
+    },
+    {
+      "preset": "api-python",
+      "category": "api",
+      "description": "Python (FastAPI) API with Docker PostgreSQL and Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 19,
+      "totalTokens": 2911,
+      "approximateTokens": 2900,
+      "files": [
+        {
+          "path": ".dockerignore",
+          "characters": 136,
+          "sha256": "95b3469325b50986d6a2d92bb1ab8c5aac567a3895940dd5033df2b8026ce460",
+          "tokens": 48
+        },
+        {
+          "path": "app/__init__.py",
+          "characters": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tokens": 0
+        },
+        {
+          "path": "app/api/__init__.py",
+          "characters": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tokens": 0
+        },
+        {
+          "path": "app/api/deps.py",
+          "characters": 1666,
+          "sha256": "7706196e8b87b7067e6bc48e5e25657269c76ee6c8bcadb53921c3cb7baf3f42",
+          "tokens": 343
+        },
+        {
+          "path": "app/api/routes/__init__.py",
+          "characters": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tokens": 0
+        },
+        {
+          "path": "app/api/routes/auth.py",
+          "characters": 2452,
+          "sha256": "405530bf158a6255fd6ef574f93a097f966f8495b6bd82dfd35820c7fdc15d7c",
+          "tokens": 531
+        },
+        {
+          "path": "app/api/routes/health.py",
+          "characters": 118,
+          "sha256": "3ff4cd545af1e56eb0b1c239607b993d44a1df9ee3c0f4c2923cfc675d411bf9",
+          "tokens": 28
+        },
+        {
+          "path": "app/api/routes/users.py",
+          "characters": 677,
+          "sha256": "504e266f9fa8706207f10b05fcdbe8fa1e256212cca1e9c6af4c3e7713f3cf2b",
+          "tokens": 153
+        },
+        {
+          "path": "app/core/__init__.py",
+          "characters": 18,
+          "sha256": "25bc3dd3768fa95285f80692a01fa618cc6d852be6f3c3bfcaa1a81a67ff4bf5",
+          "tokens": 5
+        },
+        {
+          "path": "app/core/config.py",
+          "characters": 338,
+          "sha256": "66315d32f2263989b8cde5db48b911c24938e9be696a156abe1fefc7b434f64e",
+          "tokens": 83
+        },
+        {
+          "path": "app/core/db.py",
+          "characters": 1333,
+          "sha256": "d1ec4c6b99f90e6dfdb97ebac1895d12494835f1bb9981ae3d2b7ffafcb1df6a",
+          "tokens": 300
+        },
+        {
+          "path": "app/core/redis.py",
+          "characters": 205,
+          "sha256": "2b8b9c5a9678f62cab5aa9483f6e94623b6d4d58f8f57fd2ae02232786fedc98",
+          "tokens": 52
+        },
+        {
+          "path": "app/core/security.py",
+          "characters": 1047,
+          "sha256": "da6188d325687ae0b38ef63cd35fc3cce25a8cabeeec02f5a072397180ae5c33",
+          "tokens": 239
+        },
+        {
+          "path": "app/main.py",
+          "characters": 818,
+          "sha256": "e602d34e2d9205696aafbe57296a54d2c452f4cacb92e644d89152d8a625fe67",
+          "tokens": 205
+        },
+        {
+          "path": "app/models/__init__.py",
+          "characters": 53,
+          "sha256": "5d241207a969599acff5da840b671f46d257ba7d6f4c844834377b945648b1dd",
+          "tokens": 13
+        },
+        {
+          "path": "app/models/user.py",
+          "characters": 1116,
+          "sha256": "efda5b1e1d5c3599e3652581892bf348d2a18ce74ece4ac9de299de413ff166f",
+          "tokens": 272
+        },
+        {
+          "path": "docker-compose.yml",
+          "characters": 1428,
+          "sha256": "48f28535f2b5c492ea4bc5897cce9f45d34614c2735f2bb4a33851038b78a70c",
+          "tokens": 446
+        },
+        {
+          "path": "Dockerfile",
+          "characters": 468,
+          "sha256": "19ea84bf7b703b327fe175b2ceee91fc20397f7a89c45b8a11dc17dd92b72f71",
+          "tokens": 155
+        },
+        {
+          "path": "requirements.txt",
+          "characters": 91,
+          "sha256": "ea0dc1bcef3e115fdf1819f1233b921cb02c06f36974d620bc5f8d2faf311094",
+          "tokens": 38
+        }
+      ]
+    },
+    {
+      "preset": "api-elysia",
+      "category": "api",
+      "description": "Elysia + Bun API with Docker PostgreSQL and Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 18,
+      "totalTokens": 3335,
+      "approximateTokens": 3300,
+      "files": [
+        {
+          "path": "docker-compose.yml",
+          "characters": 1428,
+          "sha256": "48f28535f2b5c492ea4bc5897cce9f45d34614c2735f2bb4a33851038b78a70c",
+          "tokens": 446
+        },
+        {
+          "path": "package.json",
+          "characters": 1024,
+          "sha256": "21ca20e2d900f7ebbdcd47051ab73745b173d7acc05d6d58709cfcc285310468",
+          "tokens": 399
+        },
+        {
+          "path": "prisma.config.ts",
+          "characters": 204,
+          "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+          "tokens": 50
+        },
+        {
+          "path": "prisma/schema.prisma",
+          "characters": 370,
+          "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+          "tokens": 93
+        },
+        {
+          "path": "src/controllers/auth.controller.ts",
+          "characters": 2242,
+          "sha256": "13b9cd324b54c818d31093daccd8d8fb2151427f68c10832c8ba6b375dd706f0",
+          "tokens": 553
+        },
+        {
+          "path": "src/controllers/user.controller.ts",
+          "characters": 816,
+          "sha256": "a5921909e59e5fb2e9a53ecfce5918d6ba235bbc6fdad886aed499ea03880520",
+          "tokens": 206
+        },
+        {
+          "path": "src/index.test.ts",
+          "characters": 170,
+          "sha256": "469fe61a8dcae0e7aa4a1a0eb36e280958d6557eb5fc6a6480712cfe40150856",
+          "tokens": 50
+        },
+        {
+          "path": "src/index.ts",
+          "characters": 849,
+          "sha256": "786e3fbc0e79f7b9c85e896489209c757e8bfaa1754980c896a949132df877dd",
+          "tokens": 204
+        },
+        {
+          "path": "src/lib/prisma.ts",
+          "characters": 701,
+          "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+          "tokens": 177
+        },
+        {
+          "path": "src/lib/redis.ts",
+          "characters": 118,
+          "sha256": "982a51a26ab258234560d8a07f8eeaf5238d673f75a5039c2a8a5a948cf38479",
+          "tokens": 30
+        },
+        {
+          "path": "src/lib/wait-for-postgres.ts",
+          "characters": 358,
+          "sha256": "d823613fc3c326257ef56fa1e477058a99807349387ac513bcc13e3726377bbd",
+          "tokens": 100
+        },
+        {
+          "path": "src/middlewares/auth.middleware.ts",
+          "characters": 1136,
+          "sha256": "662be56700acd4dd9eebdfa5f8fb0e97813fcac56cdda402f2f42c4884544bd9",
+          "tokens": 275
+        },
+        {
+          "path": "src/middlewares/error.middleware.ts",
+          "characters": 793,
+          "sha256": "858cc016b4549f15ba6380ba0ebfc0a237a479435839ccb1e6c3726a7c81036e",
+          "tokens": 195
+        },
+        {
+          "path": "src/routes/auth.routes.ts",
+          "characters": 219,
+          "sha256": "c07a26e6d079092d95fe0aea14885a223489673d07984be610ca66f7d7a2c802",
+          "tokens": 57
+        },
+        {
+          "path": "src/routes/health.routes.ts",
+          "characters": 392,
+          "sha256": "54c8a3d4f4645d0a31be236e0550cc99f1b22fe093bd643be8c0a5d5ce8d2086",
+          "tokens": 112
+        },
+        {
+          "path": "src/routes/user.routes.ts",
+          "characters": 311,
+          "sha256": "eae40b5f57f9302a338799dac54e95f193f26b761b0ce5299cce1d92e1b2080a",
+          "tokens": 74
+        },
+        {
+          "path": "src/services/user.service.ts",
+          "characters": 782,
+          "sha256": "61888eee53321ca994ba74febbd7cc9657c2e41d0c59e56379d0ecd68e075b4d",
+          "tokens": 199
+        },
+        {
+          "path": "tsconfig.json",
+          "characters": 382,
+          "sha256": "5f3da0cbe886d709293d58365b1b8c856d4111d258e5503952413ec764c1935c",
+          "tokens": 115
+        }
+      ]
+    },
+    {
+      "preset": "api-hono",
+      "category": "api",
+      "description": "Hono + Bun API with Docker PostgreSQL and Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 18,
+      "totalTokens": 3425,
+      "approximateTokens": 3400,
+      "files": [
+        {
+          "path": "docker-compose.yml",
+          "characters": 1428,
+          "sha256": "48f28535f2b5c492ea4bc5897cce9f45d34614c2735f2bb4a33851038b78a70c",
+          "tokens": 446
+        },
+        {
+          "path": "package.json",
+          "characters": 1057,
+          "sha256": "b1a63ccf8d49a4e471230315d0976804d676eb738ba311f12f113565d1b80208",
+          "tokens": 412
+        },
+        {
+          "path": "prisma.config.ts",
+          "characters": 204,
+          "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+          "tokens": 50
+        },
+        {
+          "path": "prisma/schema.prisma",
+          "characters": 370,
+          "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+          "tokens": 93
+        },
+        {
+          "path": "src/controllers/auth.controller.ts",
+          "characters": 2387,
+          "sha256": "80248ac70e55fc874de0e0d9f3378647a65c12eb95ac5585ac00ce3c574287bb",
+          "tokens": 592
+        },
+        {
+          "path": "src/controllers/user.controller.ts",
+          "characters": 921,
+          "sha256": "47d0936df96fc910005a22a507a957b1aa793edc2d43850548f6f0b4e5be18ef",
+          "tokens": 234
+        },
+        {
+          "path": "src/index.test.ts",
+          "characters": 170,
+          "sha256": "469fe61a8dcae0e7aa4a1a0eb36e280958d6557eb5fc6a6480712cfe40150856",
+          "tokens": 50
+        },
+        {
+          "path": "src/index.ts",
+          "characters": 986,
+          "sha256": "8411af8384f2ca83705ad90e4197d6caae323d1da7223225f8b8f8751d279ded",
+          "tokens": 229
+        },
+        {
+          "path": "src/lib/prisma.ts",
+          "characters": 701,
+          "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+          "tokens": 177
+        },
+        {
+          "path": "src/lib/redis.ts",
+          "characters": 118,
+          "sha256": "982a51a26ab258234560d8a07f8eeaf5238d673f75a5039c2a8a5a948cf38479",
+          "tokens": 30
+        },
+        {
+          "path": "src/lib/wait-for-postgres.ts",
+          "characters": 358,
+          "sha256": "d823613fc3c326257ef56fa1e477058a99807349387ac513bcc13e3726377bbd",
+          "tokens": 100
+        },
+        {
+          "path": "src/middlewares/auth.middleware.ts",
+          "characters": 1162,
+          "sha256": "c058d824ece4f45dce1871e06444e79ba11cf0678f0442835b5020cb3ae2ebf6",
+          "tokens": 278
+        },
+        {
+          "path": "src/middlewares/error.middleware.ts",
+          "characters": 752,
+          "sha256": "8611f194d9fee887bded78e005cd08e7f63f27fb418c62e825c7e301cf86f3fe",
+          "tokens": 180
+        },
+        {
+          "path": "src/routes/auth.routes.ts",
+          "characters": 209,
+          "sha256": "aca6397003ec07e7bb69bde7b723702d10c0c1583442e6766b52d34c9819c50e",
+          "tokens": 47
+        },
+        {
+          "path": "src/routes/health.routes.ts",
+          "characters": 359,
+          "sha256": "84606f4f6d3b5156a0e4f00c56bb0c546d336134d20373b8eb86a6f24e72eb05",
+          "tokens": 101
+        },
+        {
+          "path": "src/routes/user.routes.ts",
+          "characters": 420,
+          "sha256": "cb8ef3f91bcbbeca9bf8dbecc6df8c1a903449ce319e88b6c4e1e071208e35a1",
+          "tokens": 92
+        },
+        {
+          "path": "src/services/user.service.ts",
+          "characters": 782,
+          "sha256": "61888eee53321ca994ba74febbd7cc9657c2e41d0c59e56379d0ecd68e075b4d",
+          "tokens": 199
+        },
+        {
+          "path": "tsconfig.json",
+          "characters": 382,
+          "sha256": "5f3da0cbe886d709293d58365b1b8c856d4111d258e5503952413ec764c1935c",
+          "tokens": 115
+        }
+      ]
+    },
+    {
+      "preset": "api-express",
+      "category": "api",
+      "description": "Express + TypeScript API with Docker PostgreSQL, Zod, Helmet, CORS",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 17,
+      "totalTokens": 3109,
+      "approximateTokens": 3100,
+      "files": [
+        {
+          "path": "docker-compose.yml",
+          "characters": 840,
+          "sha256": "8c15e31cd1d67921162754d6167d4a64f613c2e46da5590ff123b6b60f0d98f2",
+          "tokens": 250
+        },
+        {
+          "path": "package.json",
+          "characters": 1104,
+          "sha256": "3a026efeb80bd71e807de2dc26bed88ecf461cc042bd36b69c5abe1d53e5f1ae",
+          "tokens": 433
+        },
+        {
+          "path": "prisma.config.ts",
+          "characters": 204,
+          "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+          "tokens": 50
+        },
+        {
+          "path": "prisma/schema.prisma",
+          "characters": 370,
+          "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+          "tokens": 93
+        },
+        {
+          "path": "src/controllers/auth.controller.ts",
+          "characters": 2389,
+          "sha256": "224b66d0cf9ddf71a14b3aca325b3ad0436436c9c25005f46243ef09ea1be874",
+          "tokens": 589
+        },
+        {
+          "path": "src/controllers/user.controller.ts",
+          "characters": 750,
+          "sha256": "7523748a5041645ca201ff59373aba1f59a6428bb274e03b23d64aa8a40c3a58",
+          "tokens": 170
+        },
+        {
+          "path": "src/index.test.ts",
+          "characters": 170,
+          "sha256": "469fe61a8dcae0e7aa4a1a0eb36e280958d6557eb5fc6a6480712cfe40150856",
+          "tokens": 50
+        },
+        {
+          "path": "src/index.ts",
+          "characters": 1055,
+          "sha256": "64f7f0299a05290ee05180b0e7d781407be5cc0c62ed24c86a6f148096bb35cd",
+          "tokens": 240
+        },
+        {
+          "path": "src/lib/prisma.ts",
+          "characters": 701,
+          "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+          "tokens": 177
+        },
+        {
+          "path": "src/lib/wait-for-postgres.ts",
+          "characters": 358,
+          "sha256": "d823613fc3c326257ef56fa1e477058a99807349387ac513bcc13e3726377bbd",
+          "tokens": 100
+        },
+        {
+          "path": "src/middlewares/auth.middleware.ts",
+          "characters": 1309,
+          "sha256": "f55437afbda7b46c6665c3e2e6b15804addb1b892a60ced539d9eaa32447cd80",
+          "tokens": 306
+        },
+        {
+          "path": "src/middlewares/error.middleware.ts",
+          "characters": 836,
+          "sha256": "125b18735eb43cbc4904280928bd13a543c54526934090db8463c684a4d8f0d5",
+          "tokens": 196
+        },
+        {
+          "path": "src/routes/auth.routes.ts",
+          "characters": 212,
+          "sha256": "f6eb6f0e7299a49707bf3ff795875d51e0a0edc571d6ee1a0b474f88d54a5526",
+          "tokens": 43
+        },
+        {
+          "path": "src/routes/health.routes.ts",
+          "characters": 353,
+          "sha256": "4093cee55a0f083842bdc4f29a9d98efa0239f8026f1677d83c4cc0e71263a95",
+          "tokens": 95
+        },
+        {
+          "path": "src/routes/user.routes.ts",
+          "characters": 368,
+          "sha256": "cd77110b2c17a7a36f23a887be4c38ee8b4c7bc9470ba33263faa825be87912f",
+          "tokens": 71
+        },
+        {
+          "path": "src/services/user.service.ts",
+          "characters": 510,
+          "sha256": "163cafda48f32aa66fac1b35642e333c72e70c83de41f8802cd1d7ce10c3b544",
+          "tokens": 131
+        },
+        {
+          "path": "tsconfig.json",
+          "characters": 382,
+          "sha256": "5f3da0cbe886d709293d58365b1b8c856d4111d258e5503952413ec764c1935c",
+          "tokens": 115
+        }
+      ]
+    },
+    {
+      "preset": "api-laravel",
+      "category": "api",
+      "description": "Laravel 11/12 API with Docker PostgreSQL and Redis",
+      "capability": "supported",
+      "status": "not-measured",
+      "reason": "Laravel downloads an unpinned upstream starter and dependencies through Composer; it is outside this bundled-template measurement."
+    },
+    {
+      "preset": "web-nextjs",
+      "category": "web",
+      "description": "Next.js App Router with Docker PostgreSQL and Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 16,
+      "totalTokens": 4067,
+      "approximateTokens": 4100,
+      "files": [
+        {
+          "path": "__tests__/example.test.ts",
+          "characters": 502,
+          "sha256": "8fe01d38e6a9e6f424690ac3518338f5d8f8901465e2e28ccedbdc5b61b0a400",
+          "tokens": 126
+        },
+        {
+          "path": "app/api/auth/login/route.ts",
+          "characters": 1520,
+          "sha256": "4dc10210ebd0b533f33986d67798dbfc16067e7bf71b46a67c5cb07aeb7deb19",
+          "tokens": 369
+        },
+        {
+          "path": "app/api/auth/register/route.ts",
+          "characters": 1607,
+          "sha256": "5ccb32bd0ad88a65cf97d2754278ffbf4a520e07edcdae7ede158d3439a4065d",
+          "tokens": 390
+        },
+        {
+          "path": "app/api/health/route.ts",
+          "characters": 222,
+          "sha256": "2f2a847556b6a64e6871efa775a15b88d8809a19797ec1107705a8ee5d1d17ee",
+          "tokens": 53
+        },
+        {
+          "path": "app/globals.css",
+          "characters": 211,
+          "sha256": "294f7c0543ccfcd409eb0ab9f092c7d712dd4c6ce14ca9a35b1345ec36363f18",
+          "tokens": 67
+        },
+        {
+          "path": "app/layout.tsx",
+          "characters": 326,
+          "sha256": "f5fb64d566ff8ce8cbee357ca009162b9da66c939343e91606ffbfafdb889459",
+          "tokens": 85
+        },
+        {
+          "path": "app/page.tsx",
+          "characters": 5477,
+          "sha256": "d7bf731e7c42fe54cc884fa0d453a3fba015134c12d2b5fc43d3a82b169a29bf",
+          "tokens": 1238
+        },
+        {
+          "path": "docker-compose.yml",
+          "characters": 1428,
+          "sha256": "48f28535f2b5c492ea4bc5897cce9f45d34614c2735f2bb4a33851038b78a70c",
+          "tokens": 446
+        },
+        {
+          "path": "lib/prisma.ts",
+          "characters": 701,
+          "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+          "tokens": 177
+        },
+        {
+          "path": "lib/redis.ts",
+          "characters": 118,
+          "sha256": "982a51a26ab258234560d8a07f8eeaf5238d673f75a5039c2a8a5a948cf38479",
+          "tokens": 30
+        },
+        {
+          "path": "next-env.d.ts",
+          "characters": 145,
+          "sha256": "6d8e2d40105909ddfc1ff9ba7aba6c7368a2d94dd93eb2b839d7007787747616",
+          "tokens": 34
+        },
+        {
+          "path": "next.config.mjs",
+          "characters": 1002,
+          "sha256": "16e659f69a16d4b12a665e7dbb2445f8ef88b18c2e99937022f8ab8b1473d3bb",
+          "tokens": 265
+        },
+        {
+          "path": "package.json",
+          "characters": 1034,
+          "sha256": "d7065a65bfc22e32c59b88d6aaf8d867c0917c8a0081b97c547498e9ce732426",
+          "tokens": 415
+        },
+        {
+          "path": "prisma.config.ts",
+          "characters": 204,
+          "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+          "tokens": 50
+        },
+        {
+          "path": "prisma/schema.prisma",
+          "characters": 370,
+          "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+          "tokens": 93
+        },
+        {
+          "path": "tsconfig.json",
+          "characters": 745,
+          "sha256": "1549431c11dccaacdf61af579016af45cf0fdcb32fb6fd481e99ab82047a1fb6",
+          "tokens": 229
+        }
+      ]
+    },
+    {
+      "preset": "web-react",
+      "category": "web",
+      "description": "React 19 SPA with Vite and Tailwind CSS v4",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".env.example",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 10,
+      "totalTokens": 2838,
+      "approximateTokens": 2800,
+      "files": [
+        {
+          "path": "index.html",
+          "characters": 299,
+          "sha256": "be2fcdce1a2a8c78974fae4bba6c3ad2abe104c3911ebfcf0456b8f2c9d23f06",
+          "tokens": 95
+        },
+        {
+          "path": "package.json",
+          "characters": 603,
+          "sha256": "d6935e6e6f14166287a1c1ade7ee1838971d54834b455bb63a4bc1ee1aa72775",
+          "tokens": 245
+        },
+        {
+          "path": "src/App.tsx",
+          "characters": 7553,
+          "sha256": "42ecbaf6d0ec1463d1b21b3c9737ae92c9bdef55b9044a221b958d53649b59e7",
+          "tokens": 1798
+        },
+        {
+          "path": "src/index.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "src/lib/AuthContext.tsx",
+          "characters": 1427,
+          "sha256": "1624844e11815eef3a10c971c6bb8236e493b12f6c86de1973e0ffc584335f97",
+          "tokens": 343
+        },
+        {
+          "path": "src/lib/supabase.ts",
+          "characters": 365,
+          "sha256": "1f1871c74d7fe614ffe06857dbc110a5b89d1b9931d825aaa075b711c5daf061",
+          "tokens": 108
+        },
+        {
+          "path": "src/main.tsx",
+          "characters": 237,
+          "sha256": "a7abd7d4681461fc08ce131fa1ef785ba83ef0fbe403d5d0164d0c7642bb12fa",
+          "tokens": 53
+        },
+        {
+          "path": "src/vite-env.d.ts",
+          "characters": 38,
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+          "tokens": 10
+        },
+        {
+          "path": "tsconfig.json",
+          "characters": 408,
+          "sha256": "633f647df6afd9234d8de7f34bc9fc2c2f308c45fb162ae981777f96f240a68d",
+          "tokens": 127
+        },
+        {
+          "path": "vite.config.ts",
+          "characters": 205,
+          "sha256": "4baafb4ff0be14ae19f137679372f9bb345600c39a296b3b41e95750b1f0807c",
+          "tokens": 52
+        }
+      ]
+    },
+    {
+      "preset": "web-vue",
+      "category": "web",
+      "description": "Vue 3 SPA with Vite and Tailwind CSS v4",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".env",
+        ".env.example",
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md"
+      ],
+      "fileCount": 10,
+      "totalTokens": 2856,
+      "approximateTokens": 2900,
+      "files": [
+        {
+          "path": "index.html",
+          "characters": 296,
+          "sha256": "f54c3813b7737e114c1e656f341883df62c81aeaf513378693ee3e85b0ae3549",
+          "tokens": 94
+        },
+        {
+          "path": "package.json",
+          "characters": 571,
+          "sha256": "8f25a40a39c0a441ee4bb60ab11a6dc675bbc53f47703fe58007a3f4c9974fc7",
+          "tokens": 237
+        },
+        {
+          "path": "src/App.vue",
+          "characters": 7831,
+          "sha256": "5ce40096cecefb949ee14fa0eff1e71a28a803d502d6b7822aa192fc5a7fbc61",
+          "tokens": 1992
+        },
+        {
+          "path": "src/lib/auth.ts",
+          "characters": 644,
+          "sha256": "c31657a816400e8efeac5bb4dc8a05a31041b901d624216cbe541dd015e42cfe",
+          "tokens": 167
+        },
+        {
+          "path": "src/lib/supabase.ts",
+          "characters": 365,
+          "sha256": "1f1871c74d7fe614ffe06857dbc110a5b89d1b9931d825aaa075b711c5daf061",
+          "tokens": 108
+        },
+        {
+          "path": "src/main.ts",
+          "characters": 111,
+          "sha256": "ae6eb9de53e72b97ee4c88fe88d2e982bf060266b2b82a0aa29ec859fa342019",
+          "tokens": 29
+        },
+        {
+          "path": "src/style.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "src/vite-env.d.ts",
+          "characters": 186,
+          "sha256": "cb3a8a70a87f0b1872244cd0bbe5bb5ddd602d820b7766a4d515b04eab8c40c7",
+          "tokens": 44
+        },
+        {
+          "path": "tsconfig.json",
+          "characters": 407,
+          "sha256": "1c55a0cd5a28a0adf04a857a20c0aeeb1c4ec83394e37aa37f7466a095dafef9",
+          "tokens": 125
+        },
+        {
+          "path": "vite.config.ts",
+          "characters": 199,
+          "sha256": "6d294880f027abb84c4f63c1eb0de70272d90fb2f0f493a8a8cf259e3e5668be",
+          "tokens": 53
+        }
+      ]
+    },
+    {
+      "preset": "fullstack-react-rust",
+      "category": "fullstack",
+      "description": "Fullstack monorepo: React Vite + Rust Axum API with Docker PostgreSQL & Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md",
+        "backend/.env",
+        "frontend/.env"
+      ],
+      "fileCount": 25,
+      "totalTokens": 6032,
+      "approximateTokens": 6000,
+      "files": [
+        {
+          "path": "backend/.dockerignore",
+          "characters": 57,
+          "sha256": "b53efa66a2e91759ec8e8f93210b8444455517ea39398da70f7017fb080257bd",
+          "tokens": 17
+        },
+        {
+          "path": "backend/Cargo.toml",
+          "characters": 609,
+          "sha256": "2c09d8f3708a94e6ac53ddaef782f42e48a7bd68548842efcd4fb7b8b6c880b2",
+          "tokens": 217
+        },
+        {
+          "path": "backend/docker-compose.yml",
+          "characters": 1476,
+          "sha256": "d14f33e141428cf9053dbb4b8459c7ba544deddc4628565c28182e94e3a8646d",
+          "tokens": 452
+        },
+        {
+          "path": "backend/Dockerfile",
+          "characters": 700,
+          "sha256": "7c15e3c7dd1225a1fbbd9b2178c308f09bdd310dca0e93702490e1cb678db1d6",
+          "tokens": 226
+        },
+        {
+          "path": "backend/migrations/20240101000000_init.sql",
+          "characters": 363,
+          "sha256": "ec926e6bd75c6c8a2ce3c85e1192af39d2991ccc3d1f378bf44b2d8c25062e8f",
+          "tokens": 91
+        },
+        {
+          "path": "backend/src/api/handlers/auth.rs",
+          "characters": 4817,
+          "sha256": "b1004d52be90e2db2af381eac7b03a4fbd5d5dead99de0466e4b1c2b30a61bfc",
+          "tokens": 1196
+        },
+        {
+          "path": "backend/src/api/handlers/health.rs",
+          "characters": 131,
+          "sha256": "46b6e1e3ba267964d4a3218660e34fbb2292c28a0fa12584fd914e46b8747483",
+          "tokens": 38
+        },
+        {
+          "path": "backend/src/api/handlers/mod.rs",
+          "characters": 45,
+          "sha256": "899045d8a2be72fd8ad047d746a9c865e1d1702d0cba09c78b8dc0bde64c25b3",
+          "tokens": 12
+        },
+        {
+          "path": "backend/src/api/handlers/users.rs",
+          "characters": 1369,
+          "sha256": "8aae096eb599a2ce0a45725c7544937219a9e72408c77b72c4af7e7e94db58c2",
+          "tokens": 346
+        },
+        {
+          "path": "backend/src/api/middleware.rs",
+          "characters": 2035,
+          "sha256": "fc6da18b5b0cf70e088fa2db450398d6346b9935428a3bec3c68dd8ccc39a400",
+          "tokens": 435
+        },
+        {
+          "path": "backend/src/api/mod.rs",
+          "characters": 147,
+          "sha256": "b79b70777f07a8df2cf189f6f2535f167e731a83f24017ade11d526a059b6602",
+          "tokens": 38
+        },
+        {
+          "path": "backend/src/cache/mod.rs",
+          "characters": 15,
+          "sha256": "43d079b43d6c9953dbb4b99240bdac56c7da0868eeb45e2e92db86ac587ac1d3",
+          "tokens": 4
+        },
+        {
+          "path": "backend/src/cache/redis.rs",
+          "characters": 212,
+          "sha256": "ed18ec51e7c4457ed11763563e9d07d3bdef170e47cb30a65332fc19da4d94e8",
+          "tokens": 58
+        },
+        {
+          "path": "backend/src/db/mod.rs",
+          "characters": 16,
+          "sha256": "35f404d9b935503635b26860b67e7ceb73b4cfc443bd482278e30f0873becff7",
+          "tokens": 4
+        },
+        {
+          "path": "backend/src/db/models.rs",
+          "characters": 578,
+          "sha256": "522588d847d7ebaffccf590036ecb8debcdab39e567af932ce1ab36639a3eb81",
+          "tokens": 152
+        },
+        {
+          "path": "backend/src/main.rs",
+          "characters": 1826,
+          "sha256": "e1ae4cb7a21692adb9f57854a503ecf0e59fa48aeb9c700e72963633f3b03997",
+          "tokens": 462
+        },
+        {
+          "path": "frontend/index.html",
+          "characters": 299,
+          "sha256": "be2fcdce1a2a8c78974fae4bba6c3ad2abe104c3911ebfcf0456b8f2c9d23f06",
+          "tokens": 95
+        },
+        {
+          "path": "frontend/package.json",
+          "characters": 552,
+          "sha256": "2717512e6ed24578a4a033082493a8e674d883726f4f67ea560b1f31695d7528",
+          "tokens": 217
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "characters": 6701,
+          "sha256": "4e35ddaadd2109e90d3bff8a71222dac35fa5adc62e5d087a61a4c0dcec87414",
+          "tokens": 1644
+        },
+        {
+          "path": "frontend/src/index.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "characters": 237,
+          "sha256": "a7abd7d4681461fc08ce131fa1ef785ba83ef0fbe403d5d0164d0c7642bb12fa",
+          "tokens": 53
+        },
+        {
+          "path": "frontend/src/vite-env.d.ts",
+          "characters": 38,
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+          "tokens": 10
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "characters": 408,
+          "sha256": "633f647df6afd9234d8de7f34bc9fc2c2f308c45fb162ae981777f96f240a68d",
+          "tokens": 127
+        },
+        {
+          "path": "frontend/vite.config.ts",
+          "characters": 205,
+          "sha256": "4baafb4ff0be14ae19f137679372f9bb345600c39a296b3b41e95750b1f0807c",
+          "tokens": 52
+        },
+        {
+          "path": "package.json",
+          "characters": 248,
+          "sha256": "d83def001b6e454a00b588c43187d823579e3d801f413d89cd3b9aa9a58abf61",
+          "tokens": 79
+        }
+      ]
+    },
+    {
+      "preset": "fullstack-react-go",
+      "category": "fullstack",
+      "description": "Fullstack monorepo: React Vite + Go Fiber API with Docker PostgreSQL & Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md",
+        "backend/.env",
+        "frontend/.env"
+      ],
+      "fileCount": 21,
+      "totalTokens": 5668,
+      "approximateTokens": 5700,
+      "files": [
+        {
+          "path": "backend/.dockerignore",
+          "characters": 87,
+          "sha256": "e97535aa42b6b125b2127abd41f730b1b8536d7a79576cebbd15600096fee8b3",
+          "tokens": 31
+        },
+        {
+          "path": "backend/cmd/api/main.go",
+          "characters": 1395,
+          "sha256": "fcef061671f21cb9f5fd4b076f357a4db17544af3059629a8a5dd13bc114ea43",
+          "tokens": 359
+        },
+        {
+          "path": "backend/docker-compose.yml",
+          "characters": 1476,
+          "sha256": "d14f33e141428cf9053dbb4b8459c7ba544deddc4628565c28182e94e3a8646d",
+          "tokens": 452
+        },
+        {
+          "path": "backend/Dockerfile",
+          "characters": 634,
+          "sha256": "6368dc3ae67358b77df6942d9b374108d39dac34e2d8f149174ab47c755763ff",
+          "tokens": 216
+        },
+        {
+          "path": "backend/go.mod",
+          "characters": 318,
+          "sha256": "51015645586765e9245d587897d9f79220850cb9cbd06d272e3453669a287fdb",
+          "tokens": 133
+        },
+        {
+          "path": "backend/internal/cache/redis.go",
+          "characters": 512,
+          "sha256": "947e9b81baea61d2f74b5a4757e3c86588e3e93d97f63c669d41acc056e6c608",
+          "tokens": 142
+        },
+        {
+          "path": "backend/internal/database/database.go",
+          "characters": 605,
+          "sha256": "13103781c55d361e50a3b6de37ada548e68f4fb7152b8ca3df7d28ce0229bfdd",
+          "tokens": 161
+        },
+        {
+          "path": "backend/internal/handlers/auth.go",
+          "characters": 3707,
+          "sha256": "9f0be0f63be698cd4e4d432e7f1331ea2fca1d20d46426e9f5d3925b87b46d0b",
+          "tokens": 979
+        },
+        {
+          "path": "backend/internal/handlers/health.go",
+          "characters": 150,
+          "sha256": "42fdb7ca749519aa688c76daddc19e131e3101c5e057c94481bcd8533d7ac570",
+          "tokens": 46
+        },
+        {
+          "path": "backend/internal/handlers/users.go",
+          "characters": 457,
+          "sha256": "a5d7ceed2ce6fa81c37b7b74b648658cd7dd306bb1c5fb8765b4372a0228210e",
+          "tokens": 116
+        },
+        {
+          "path": "backend/internal/middleware/auth.go",
+          "characters": 1896,
+          "sha256": "8c2c79526ff70b5c999c005568b4bda6d090616bd4c351204b9d713e1bb8f7a1",
+          "tokens": 511
+        },
+        {
+          "path": "backend/internal/models/user.go",
+          "characters": 838,
+          "sha256": "8e5c8846e96314e0bcffebd922949b5d619acbc138f858d92aa5cf82dffe235c",
+          "tokens": 234
+        },
+        {
+          "path": "frontend/index.html",
+          "characters": 299,
+          "sha256": "be2fcdce1a2a8c78974fae4bba6c3ad2abe104c3911ebfcf0456b8f2c9d23f06",
+          "tokens": 95
+        },
+        {
+          "path": "frontend/package.json",
+          "characters": 552,
+          "sha256": "2717512e6ed24578a4a033082493a8e674d883726f4f67ea560b1f31695d7528",
+          "tokens": 217
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "characters": 6701,
+          "sha256": "4e35ddaadd2109e90d3bff8a71222dac35fa5adc62e5d087a61a4c0dcec87414",
+          "tokens": 1644
+        },
+        {
+          "path": "frontend/src/index.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "characters": 237,
+          "sha256": "a7abd7d4681461fc08ce131fa1ef785ba83ef0fbe403d5d0164d0c7642bb12fa",
+          "tokens": 53
+        },
+        {
+          "path": "frontend/src/vite-env.d.ts",
+          "characters": 38,
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+          "tokens": 10
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "characters": 408,
+          "sha256": "633f647df6afd9234d8de7f34bc9fc2c2f308c45fb162ae981777f96f240a68d",
+          "tokens": 127
+        },
+        {
+          "path": "frontend/vite.config.ts",
+          "characters": 205,
+          "sha256": "4baafb4ff0be14ae19f137679372f9bb345600c39a296b3b41e95750b1f0807c",
+          "tokens": 52
+        },
+        {
+          "path": "package.json",
+          "characters": 261,
+          "sha256": "0bea6e748c2fee0e903be4ad38b3013791968d77a664ae7ce28b0e857055bb5f",
+          "tokens": 83
+        }
+      ]
+    },
+    {
+      "preset": "fullstack-react-elysia",
+      "category": "fullstack",
+      "description": "Fullstack monorepo: React Vite + Elysia Bun API with Docker PostgreSQL & Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md",
+        "backend/.env",
+        "frontend/.env"
+      ],
+      "fileCount": 27,
+      "totalTokens": 5725,
+      "approximateTokens": 5700,
+      "files": [
+        {
+          "path": "backend/docker-compose.yml",
+          "characters": 1476,
+          "sha256": "d14f33e141428cf9053dbb4b8459c7ba544deddc4628565c28182e94e3a8646d",
+          "tokens": 452
+        },
+        {
+          "path": "backend/package.json",
+          "characters": 1063,
+          "sha256": "cef3e0d8864c4c3147356c68957a8f4308ef53edc4b966c204d0410c27f9ed14",
+          "tokens": 416
+        },
+        {
+          "path": "backend/prisma.config.ts",
+          "characters": 204,
+          "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+          "tokens": 50
+        },
+        {
+          "path": "backend/prisma/schema.prisma",
+          "characters": 370,
+          "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+          "tokens": 93
+        },
+        {
+          "path": "backend/src/controllers/auth.controller.ts",
+          "characters": 2242,
+          "sha256": "13b9cd324b54c818d31093daccd8d8fb2151427f68c10832c8ba6b375dd706f0",
+          "tokens": 553
+        },
+        {
+          "path": "backend/src/controllers/user.controller.ts",
+          "characters": 816,
+          "sha256": "a5921909e59e5fb2e9a53ecfce5918d6ba235bbc6fdad886aed499ea03880520",
+          "tokens": 206
+        },
+        {
+          "path": "backend/src/index.test.ts",
+          "characters": 170,
+          "sha256": "469fe61a8dcae0e7aa4a1a0eb36e280958d6557eb5fc6a6480712cfe40150856",
+          "tokens": 50
+        },
+        {
+          "path": "backend/src/index.ts",
+          "characters": 957,
+          "sha256": "0545ebcd4cf7c71b468e79883666094d4d4f99fa5af08ef8f2c524de6580eab2",
+          "tokens": 236
+        },
+        {
+          "path": "backend/src/lib/prisma.ts",
+          "characters": 701,
+          "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+          "tokens": 177
+        },
+        {
+          "path": "backend/src/lib/redis.ts",
+          "characters": 118,
+          "sha256": "982a51a26ab258234560d8a07f8eeaf5238d673f75a5039c2a8a5a948cf38479",
+          "tokens": 30
+        },
+        {
+          "path": "backend/src/lib/wait-for-postgres.ts",
+          "characters": 358,
+          "sha256": "d823613fc3c326257ef56fa1e477058a99807349387ac513bcc13e3726377bbd",
+          "tokens": 100
+        },
+        {
+          "path": "backend/src/middlewares/auth.middleware.ts",
+          "characters": 1136,
+          "sha256": "662be56700acd4dd9eebdfa5f8fb0e97813fcac56cdda402f2f42c4884544bd9",
+          "tokens": 275
+        },
+        {
+          "path": "backend/src/middlewares/error.middleware.ts",
+          "characters": 793,
+          "sha256": "858cc016b4549f15ba6380ba0ebfc0a237a479435839ccb1e6c3726a7c81036e",
+          "tokens": 195
+        },
+        {
+          "path": "backend/src/routes/auth.routes.ts",
+          "characters": 219,
+          "sha256": "c07a26e6d079092d95fe0aea14885a223489673d07984be610ca66f7d7a2c802",
+          "tokens": 57
+        },
+        {
+          "path": "backend/src/routes/health.routes.ts",
+          "characters": 392,
+          "sha256": "54c8a3d4f4645d0a31be236e0550cc99f1b22fe093bd643be8c0a5d5ce8d2086",
+          "tokens": 112
+        },
+        {
+          "path": "backend/src/routes/user.routes.ts",
+          "characters": 311,
+          "sha256": "eae40b5f57f9302a338799dac54e95f193f26b761b0ce5299cce1d92e1b2080a",
+          "tokens": 74
+        },
+        {
+          "path": "backend/src/services/user.service.ts",
+          "characters": 782,
+          "sha256": "61888eee53321ca994ba74febbd7cc9657c2e41d0c59e56379d0ecd68e075b4d",
+          "tokens": 199
+        },
+        {
+          "path": "backend/tsconfig.json",
+          "characters": 382,
+          "sha256": "5f3da0cbe886d709293d58365b1b8c856d4111d258e5503952413ec764c1935c",
+          "tokens": 115
+        },
+        {
+          "path": "frontend/index.html",
+          "characters": 299,
+          "sha256": "be2fcdce1a2a8c78974fae4bba6c3ad2abe104c3911ebfcf0456b8f2c9d23f06",
+          "tokens": 95
+        },
+        {
+          "path": "frontend/package.json",
+          "characters": 552,
+          "sha256": "2717512e6ed24578a4a033082493a8e674d883726f4f67ea560b1f31695d7528",
+          "tokens": 217
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "characters": 6701,
+          "sha256": "4e35ddaadd2109e90d3bff8a71222dac35fa5adc62e5d087a61a4c0dcec87414",
+          "tokens": 1644
+        },
+        {
+          "path": "frontend/src/index.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "characters": 237,
+          "sha256": "a7abd7d4681461fc08ce131fa1ef785ba83ef0fbe403d5d0164d0c7642bb12fa",
+          "tokens": 53
+        },
+        {
+          "path": "frontend/src/vite-env.d.ts",
+          "characters": 38,
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+          "tokens": 10
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "characters": 408,
+          "sha256": "633f647df6afd9234d8de7f34bc9fc2c2f308c45fb162ae981777f96f240a68d",
+          "tokens": 127
+        },
+        {
+          "path": "frontend/vite.config.ts",
+          "characters": 205,
+          "sha256": "4baafb4ff0be14ae19f137679372f9bb345600c39a296b3b41e95750b1f0807c",
+          "tokens": 52
+        },
+        {
+          "path": "package.json",
+          "characters": 417,
+          "sha256": "771c81e6f942e1388a295c4222a85c56835fc75e2c08d93c7a364270a109d72b",
+          "tokens": 130
+        }
+      ]
+    },
+    {
+      "preset": "fullstack-react-hono",
+      "category": "fullstack",
+      "description": "Fullstack monorepo: React Vite + Hono Bun API with Docker PostgreSQL & Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md",
+        "backend/.env",
+        "frontend/.env"
+      ],
+      "fileCount": 27,
+      "totalTokens": 5798,
+      "approximateTokens": 5800,
+      "files": [
+        {
+          "path": "backend/docker-compose.yml",
+          "characters": 1476,
+          "sha256": "d14f33e141428cf9053dbb4b8459c7ba544deddc4628565c28182e94e3a8646d",
+          "tokens": 452
+        },
+        {
+          "path": "backend/package.json",
+          "characters": 1065,
+          "sha256": "cde3b802d50d6fa0ed6fa9a37cf36d18816fb4debf3c2587fe40756edc686f94",
+          "tokens": 413
+        },
+        {
+          "path": "backend/prisma.config.ts",
+          "characters": 204,
+          "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+          "tokens": 50
+        },
+        {
+          "path": "backend/prisma/schema.prisma",
+          "characters": 370,
+          "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+          "tokens": 93
+        },
+        {
+          "path": "backend/src/controllers/auth.controller.ts",
+          "characters": 2387,
+          "sha256": "80248ac70e55fc874de0e0d9f3378647a65c12eb95ac5585ac00ce3c574287bb",
+          "tokens": 592
+        },
+        {
+          "path": "backend/src/controllers/user.controller.ts",
+          "characters": 921,
+          "sha256": "47d0936df96fc910005a22a507a957b1aa793edc2d43850548f6f0b4e5be18ef",
+          "tokens": 234
+        },
+        {
+          "path": "backend/src/index.test.ts",
+          "characters": 170,
+          "sha256": "469fe61a8dcae0e7aa4a1a0eb36e280958d6557eb5fc6a6480712cfe40150856",
+          "tokens": 50
+        },
+        {
+          "path": "backend/src/index.ts",
+          "characters": 1096,
+          "sha256": "355e78abf74bc116a04a2719612d5dc62cb045d4d70480b4503746179ff28e7d",
+          "tokens": 260
+        },
+        {
+          "path": "backend/src/lib/prisma.ts",
+          "characters": 701,
+          "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+          "tokens": 177
+        },
+        {
+          "path": "backend/src/lib/redis.ts",
+          "characters": 118,
+          "sha256": "982a51a26ab258234560d8a07f8eeaf5238d673f75a5039c2a8a5a948cf38479",
+          "tokens": 30
+        },
+        {
+          "path": "backend/src/lib/wait-for-postgres.ts",
+          "characters": 358,
+          "sha256": "d823613fc3c326257ef56fa1e477058a99807349387ac513bcc13e3726377bbd",
+          "tokens": 100
+        },
+        {
+          "path": "backend/src/middlewares/auth.middleware.ts",
+          "characters": 1162,
+          "sha256": "c058d824ece4f45dce1871e06444e79ba11cf0678f0442835b5020cb3ae2ebf6",
+          "tokens": 278
+        },
+        {
+          "path": "backend/src/middlewares/error.middleware.ts",
+          "characters": 752,
+          "sha256": "8611f194d9fee887bded78e005cd08e7f63f27fb418c62e825c7e301cf86f3fe",
+          "tokens": 180
+        },
+        {
+          "path": "backend/src/routes/auth.routes.ts",
+          "characters": 209,
+          "sha256": "aca6397003ec07e7bb69bde7b723702d10c0c1583442e6766b52d34c9819c50e",
+          "tokens": 47
+        },
+        {
+          "path": "backend/src/routes/health.routes.ts",
+          "characters": 359,
+          "sha256": "84606f4f6d3b5156a0e4f00c56bb0c546d336134d20373b8eb86a6f24e72eb05",
+          "tokens": 101
+        },
+        {
+          "path": "backend/src/routes/user.routes.ts",
+          "characters": 420,
+          "sha256": "cb8ef3f91bcbbeca9bf8dbecc6df8c1a903449ce319e88b6c4e1e071208e35a1",
+          "tokens": 92
+        },
+        {
+          "path": "backend/src/services/user.service.ts",
+          "characters": 782,
+          "sha256": "61888eee53321ca994ba74febbd7cc9657c2e41d0c59e56379d0ecd68e075b4d",
+          "tokens": 199
+        },
+        {
+          "path": "backend/tsconfig.json",
+          "characters": 382,
+          "sha256": "5f3da0cbe886d709293d58365b1b8c856d4111d258e5503952413ec764c1935c",
+          "tokens": 115
+        },
+        {
+          "path": "frontend/index.html",
+          "characters": 299,
+          "sha256": "be2fcdce1a2a8c78974fae4bba6c3ad2abe104c3911ebfcf0456b8f2c9d23f06",
+          "tokens": 95
+        },
+        {
+          "path": "frontend/package.json",
+          "characters": 552,
+          "sha256": "2717512e6ed24578a4a033082493a8e674d883726f4f67ea560b1f31695d7528",
+          "tokens": 217
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "characters": 6701,
+          "sha256": "4e35ddaadd2109e90d3bff8a71222dac35fa5adc62e5d087a61a4c0dcec87414",
+          "tokens": 1644
+        },
+        {
+          "path": "frontend/src/index.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "characters": 237,
+          "sha256": "a7abd7d4681461fc08ce131fa1ef785ba83ef0fbe403d5d0164d0c7642bb12fa",
+          "tokens": 53
+        },
+        {
+          "path": "frontend/src/vite-env.d.ts",
+          "characters": 38,
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+          "tokens": 10
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "characters": 408,
+          "sha256": "633f647df6afd9234d8de7f34bc9fc2c2f308c45fb162ae981777f96f240a68d",
+          "tokens": 127
+        },
+        {
+          "path": "frontend/vite.config.ts",
+          "characters": 205,
+          "sha256": "4baafb4ff0be14ae19f137679372f9bb345600c39a296b3b41e95750b1f0807c",
+          "tokens": 52
+        },
+        {
+          "path": "package.json",
+          "characters": 417,
+          "sha256": "771c81e6f942e1388a295c4222a85c56835fc75e2c08d93c7a364270a109d72b",
+          "tokens": 130
+        }
+      ]
+    },
+    {
+      "preset": "fullstack-react-express",
+      "category": "fullstack",
+      "description": "Fullstack monorepo: React Vite + Express API with Docker PostgreSQL",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md",
+        "backend/.env",
+        "frontend/.env"
+      ],
+      "fileCount": 26,
+      "totalTokens": 5450,
+      "approximateTokens": 5500,
+      "files": [
+        {
+          "path": "backend/docker-compose.yml",
+          "characters": 880,
+          "sha256": "23d35ca35d126d6513047be3e314ff7796131db1840f6aec23203ad00c949c68",
+          "tokens": 255
+        },
+        {
+          "path": "backend/package.json",
+          "characters": 1112,
+          "sha256": "72ef619943121aeed63b9fb89fa93302320bc98d471026283014f6780adcc898",
+          "tokens": 434
+        },
+        {
+          "path": "backend/prisma.config.ts",
+          "characters": 204,
+          "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+          "tokens": 50
+        },
+        {
+          "path": "backend/prisma/schema.prisma",
+          "characters": 370,
+          "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+          "tokens": 93
+        },
+        {
+          "path": "backend/src/controllers/auth.controller.ts",
+          "characters": 2389,
+          "sha256": "224b66d0cf9ddf71a14b3aca325b3ad0436436c9c25005f46243ef09ea1be874",
+          "tokens": 589
+        },
+        {
+          "path": "backend/src/controllers/user.controller.ts",
+          "characters": 750,
+          "sha256": "7523748a5041645ca201ff59373aba1f59a6428bb274e03b23d64aa8a40c3a58",
+          "tokens": 170
+        },
+        {
+          "path": "backend/src/index.test.ts",
+          "characters": 170,
+          "sha256": "469fe61a8dcae0e7aa4a1a0eb36e280958d6557eb5fc6a6480712cfe40150856",
+          "tokens": 50
+        },
+        {
+          "path": "backend/src/index.ts",
+          "characters": 1055,
+          "sha256": "64f7f0299a05290ee05180b0e7d781407be5cc0c62ed24c86a6f148096bb35cd",
+          "tokens": 240
+        },
+        {
+          "path": "backend/src/lib/prisma.ts",
+          "characters": 701,
+          "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+          "tokens": 177
+        },
+        {
+          "path": "backend/src/lib/wait-for-postgres.ts",
+          "characters": 358,
+          "sha256": "d823613fc3c326257ef56fa1e477058a99807349387ac513bcc13e3726377bbd",
+          "tokens": 100
+        },
+        {
+          "path": "backend/src/middlewares/auth.middleware.ts",
+          "characters": 1309,
+          "sha256": "f55437afbda7b46c6665c3e2e6b15804addb1b892a60ced539d9eaa32447cd80",
+          "tokens": 306
+        },
+        {
+          "path": "backend/src/middlewares/error.middleware.ts",
+          "characters": 836,
+          "sha256": "125b18735eb43cbc4904280928bd13a543c54526934090db8463c684a4d8f0d5",
+          "tokens": 196
+        },
+        {
+          "path": "backend/src/routes/auth.routes.ts",
+          "characters": 212,
+          "sha256": "f6eb6f0e7299a49707bf3ff795875d51e0a0edc571d6ee1a0b474f88d54a5526",
+          "tokens": 43
+        },
+        {
+          "path": "backend/src/routes/health.routes.ts",
+          "characters": 353,
+          "sha256": "4093cee55a0f083842bdc4f29a9d98efa0239f8026f1677d83c4cc0e71263a95",
+          "tokens": 95
+        },
+        {
+          "path": "backend/src/routes/user.routes.ts",
+          "characters": 368,
+          "sha256": "cd77110b2c17a7a36f23a887be4c38ee8b4c7bc9470ba33263faa825be87912f",
+          "tokens": 71
+        },
+        {
+          "path": "backend/src/services/user.service.ts",
+          "characters": 510,
+          "sha256": "163cafda48f32aa66fac1b35642e333c72e70c83de41f8802cd1d7ce10c3b544",
+          "tokens": 131
+        },
+        {
+          "path": "backend/tsconfig.json",
+          "characters": 382,
+          "sha256": "5f3da0cbe886d709293d58365b1b8c856d4111d258e5503952413ec764c1935c",
+          "tokens": 115
+        },
+        {
+          "path": "frontend/index.html",
+          "characters": 299,
+          "sha256": "be2fcdce1a2a8c78974fae4bba6c3ad2abe104c3911ebfcf0456b8f2c9d23f06",
+          "tokens": 95
+        },
+        {
+          "path": "frontend/package.json",
+          "characters": 552,
+          "sha256": "2717512e6ed24578a4a033082493a8e674d883726f4f67ea560b1f31695d7528",
+          "tokens": 217
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "characters": 6701,
+          "sha256": "4e35ddaadd2109e90d3bff8a71222dac35fa5adc62e5d087a61a4c0dcec87414",
+          "tokens": 1644
+        },
+        {
+          "path": "frontend/src/index.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "characters": 237,
+          "sha256": "a7abd7d4681461fc08ce131fa1ef785ba83ef0fbe403d5d0164d0c7642bb12fa",
+          "tokens": 53
+        },
+        {
+          "path": "frontend/src/vite-env.d.ts",
+          "characters": 38,
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+          "tokens": 10
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "characters": 408,
+          "sha256": "633f647df6afd9234d8de7f34bc9fc2c2f308c45fb162ae981777f96f240a68d",
+          "tokens": 127
+        },
+        {
+          "path": "frontend/vite.config.ts",
+          "characters": 205,
+          "sha256": "4baafb4ff0be14ae19f137679372f9bb345600c39a296b3b41e95750b1f0807c",
+          "tokens": 52
+        },
+        {
+          "path": "package.json",
+          "characters": 417,
+          "sha256": "771c81e6f942e1388a295c4222a85c56835fc75e2c08d93c7a364270a109d72b",
+          "tokens": 130
+        }
+      ]
+    },
+    {
+      "preset": "fullstack-react-fastapi",
+      "category": "fullstack",
+      "description": "Fullstack monorepo: React Vite + Python FastAPI with Docker PostgreSQL & Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md",
+        "backend/.env",
+        "frontend/.env"
+      ],
+      "fileCount": 28,
+      "totalTokens": 5211,
+      "approximateTokens": 5200,
+      "files": [
+        {
+          "path": "backend/.dockerignore",
+          "characters": 136,
+          "sha256": "95b3469325b50986d6a2d92bb1ab8c5aac567a3895940dd5033df2b8026ce460",
+          "tokens": 48
+        },
+        {
+          "path": "backend/app/__init__.py",
+          "characters": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tokens": 0
+        },
+        {
+          "path": "backend/app/api/__init__.py",
+          "characters": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tokens": 0
+        },
+        {
+          "path": "backend/app/api/deps.py",
+          "characters": 1666,
+          "sha256": "7706196e8b87b7067e6bc48e5e25657269c76ee6c8bcadb53921c3cb7baf3f42",
+          "tokens": 343
+        },
+        {
+          "path": "backend/app/api/routes/__init__.py",
+          "characters": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tokens": 0
+        },
+        {
+          "path": "backend/app/api/routes/auth.py",
+          "characters": 2452,
+          "sha256": "405530bf158a6255fd6ef574f93a097f966f8495b6bd82dfd35820c7fdc15d7c",
+          "tokens": 531
+        },
+        {
+          "path": "backend/app/api/routes/health.py",
+          "characters": 118,
+          "sha256": "3ff4cd545af1e56eb0b1c239607b993d44a1df9ee3c0f4c2923cfc675d411bf9",
+          "tokens": 28
+        },
+        {
+          "path": "backend/app/api/routes/users.py",
+          "characters": 677,
+          "sha256": "504e266f9fa8706207f10b05fcdbe8fa1e256212cca1e9c6af4c3e7713f3cf2b",
+          "tokens": 153
+        },
+        {
+          "path": "backend/app/core/__init__.py",
+          "characters": 18,
+          "sha256": "25bc3dd3768fa95285f80692a01fa618cc6d852be6f3c3bfcaa1a81a67ff4bf5",
+          "tokens": 5
+        },
+        {
+          "path": "backend/app/core/config.py",
+          "characters": 338,
+          "sha256": "66315d32f2263989b8cde5db48b911c24938e9be696a156abe1fefc7b434f64e",
+          "tokens": 83
+        },
+        {
+          "path": "backend/app/core/db.py",
+          "characters": 1333,
+          "sha256": "d1ec4c6b99f90e6dfdb97ebac1895d12494835f1bb9981ae3d2b7ffafcb1df6a",
+          "tokens": 300
+        },
+        {
+          "path": "backend/app/core/redis.py",
+          "characters": 205,
+          "sha256": "2b8b9c5a9678f62cab5aa9483f6e94623b6d4d58f8f57fd2ae02232786fedc98",
+          "tokens": 52
+        },
+        {
+          "path": "backend/app/core/security.py",
+          "characters": 1047,
+          "sha256": "da6188d325687ae0b38ef63cd35fc3cce25a8cabeeec02f5a072397180ae5c33",
+          "tokens": 239
+        },
+        {
+          "path": "backend/app/main.py",
+          "characters": 818,
+          "sha256": "e602d34e2d9205696aafbe57296a54d2c452f4cacb92e644d89152d8a625fe67",
+          "tokens": 205
+        },
+        {
+          "path": "backend/app/models/__init__.py",
+          "characters": 53,
+          "sha256": "5d241207a969599acff5da840b671f46d257ba7d6f4c844834377b945648b1dd",
+          "tokens": 13
+        },
+        {
+          "path": "backend/app/models/user.py",
+          "characters": 1116,
+          "sha256": "efda5b1e1d5c3599e3652581892bf348d2a18ce74ece4ac9de299de413ff166f",
+          "tokens": 272
+        },
+        {
+          "path": "backend/docker-compose.yml",
+          "characters": 1476,
+          "sha256": "d14f33e141428cf9053dbb4b8459c7ba544deddc4628565c28182e94e3a8646d",
+          "tokens": 452
+        },
+        {
+          "path": "backend/Dockerfile",
+          "characters": 468,
+          "sha256": "19ea84bf7b703b327fe175b2ceee91fc20397f7a89c45b8a11dc17dd92b72f71",
+          "tokens": 155
+        },
+        {
+          "path": "backend/requirements.txt",
+          "characters": 91,
+          "sha256": "ea0dc1bcef3e115fdf1819f1233b921cb02c06f36974d620bc5f8d2faf311094",
+          "tokens": 38
+        },
+        {
+          "path": "frontend/index.html",
+          "characters": 299,
+          "sha256": "be2fcdce1a2a8c78974fae4bba6c3ad2abe104c3911ebfcf0456b8f2c9d23f06",
+          "tokens": 95
+        },
+        {
+          "path": "frontend/package.json",
+          "characters": 552,
+          "sha256": "2717512e6ed24578a4a033082493a8e674d883726f4f67ea560b1f31695d7528",
+          "tokens": 217
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "characters": 6701,
+          "sha256": "4e35ddaadd2109e90d3bff8a71222dac35fa5adc62e5d087a61a4c0dcec87414",
+          "tokens": 1644
+        },
+        {
+          "path": "frontend/src/index.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "characters": 237,
+          "sha256": "a7abd7d4681461fc08ce131fa1ef785ba83ef0fbe403d5d0164d0c7642bb12fa",
+          "tokens": 53
+        },
+        {
+          "path": "frontend/src/vite-env.d.ts",
+          "characters": 38,
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+          "tokens": 10
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "characters": 408,
+          "sha256": "633f647df6afd9234d8de7f34bc9fc2c2f308c45fb162ae981777f96f240a68d",
+          "tokens": 127
+        },
+        {
+          "path": "frontend/vite.config.ts",
+          "characters": 205,
+          "sha256": "4baafb4ff0be14ae19f137679372f9bb345600c39a296b3b41e95750b1f0807c",
+          "tokens": 52
+        },
+        {
+          "path": "package.json",
+          "characters": 277,
+          "sha256": "0224cbddc309d5a0fd8f001ff1e8aa18bd77923822a4facef0b209448c91fec8",
+          "tokens": 89
+        }
+      ]
+    },
+    {
+      "preset": "fullstack-vue-hono",
+      "category": "fullstack",
+      "description": "Fullstack monorepo: Vue Vite + Hono Bun API with Docker PostgreSQL & Redis",
+      "capability": "supported",
+      "status": "measured",
+      "excludedPaths": [
+        ".qwykz-manifest.json",
+        "AGENTS.md",
+        "LEARN.md",
+        "backend/.env",
+        "frontend/.env"
+      ],
+      "fileCount": 27,
+      "totalTokens": 5786,
+      "approximateTokens": 5800,
+      "files": [
+        {
+          "path": "backend/docker-compose.yml",
+          "characters": 1476,
+          "sha256": "d14f33e141428cf9053dbb4b8459c7ba544deddc4628565c28182e94e3a8646d",
+          "tokens": 452
+        },
+        {
+          "path": "backend/package.json",
+          "characters": 1065,
+          "sha256": "cde3b802d50d6fa0ed6fa9a37cf36d18816fb4debf3c2587fe40756edc686f94",
+          "tokens": 413
+        },
+        {
+          "path": "backend/prisma.config.ts",
+          "characters": 204,
+          "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+          "tokens": 50
+        },
+        {
+          "path": "backend/prisma/schema.prisma",
+          "characters": 370,
+          "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+          "tokens": 93
+        },
+        {
+          "path": "backend/src/controllers/auth.controller.ts",
+          "characters": 2387,
+          "sha256": "80248ac70e55fc874de0e0d9f3378647a65c12eb95ac5585ac00ce3c574287bb",
+          "tokens": 592
+        },
+        {
+          "path": "backend/src/controllers/user.controller.ts",
+          "characters": 921,
+          "sha256": "47d0936df96fc910005a22a507a957b1aa793edc2d43850548f6f0b4e5be18ef",
+          "tokens": 234
+        },
+        {
+          "path": "backend/src/index.test.ts",
+          "characters": 170,
+          "sha256": "469fe61a8dcae0e7aa4a1a0eb36e280958d6557eb5fc6a6480712cfe40150856",
+          "tokens": 50
+        },
+        {
+          "path": "backend/src/index.ts",
+          "characters": 1096,
+          "sha256": "355e78abf74bc116a04a2719612d5dc62cb045d4d70480b4503746179ff28e7d",
+          "tokens": 260
+        },
+        {
+          "path": "backend/src/lib/prisma.ts",
+          "characters": 701,
+          "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+          "tokens": 177
+        },
+        {
+          "path": "backend/src/lib/redis.ts",
+          "characters": 118,
+          "sha256": "982a51a26ab258234560d8a07f8eeaf5238d673f75a5039c2a8a5a948cf38479",
+          "tokens": 30
+        },
+        {
+          "path": "backend/src/lib/wait-for-postgres.ts",
+          "characters": 358,
+          "sha256": "d823613fc3c326257ef56fa1e477058a99807349387ac513bcc13e3726377bbd",
+          "tokens": 100
+        },
+        {
+          "path": "backend/src/middlewares/auth.middleware.ts",
+          "characters": 1162,
+          "sha256": "c058d824ece4f45dce1871e06444e79ba11cf0678f0442835b5020cb3ae2ebf6",
+          "tokens": 278
+        },
+        {
+          "path": "backend/src/middlewares/error.middleware.ts",
+          "characters": 752,
+          "sha256": "8611f194d9fee887bded78e005cd08e7f63f27fb418c62e825c7e301cf86f3fe",
+          "tokens": 180
+        },
+        {
+          "path": "backend/src/routes/auth.routes.ts",
+          "characters": 209,
+          "sha256": "aca6397003ec07e7bb69bde7b723702d10c0c1583442e6766b52d34c9819c50e",
+          "tokens": 47
+        },
+        {
+          "path": "backend/src/routes/health.routes.ts",
+          "characters": 359,
+          "sha256": "84606f4f6d3b5156a0e4f00c56bb0c546d336134d20373b8eb86a6f24e72eb05",
+          "tokens": 101
+        },
+        {
+          "path": "backend/src/routes/user.routes.ts",
+          "characters": 420,
+          "sha256": "cb8ef3f91bcbbeca9bf8dbecc6df8c1a903449ce319e88b6c4e1e071208e35a1",
+          "tokens": 92
+        },
+        {
+          "path": "backend/src/services/user.service.ts",
+          "characters": 782,
+          "sha256": "61888eee53321ca994ba74febbd7cc9657c2e41d0c59e56379d0ecd68e075b4d",
+          "tokens": 199
+        },
+        {
+          "path": "backend/tsconfig.json",
+          "characters": 382,
+          "sha256": "5f3da0cbe886d709293d58365b1b8c856d4111d258e5503952413ec764c1935c",
+          "tokens": 115
+        },
+        {
+          "path": "frontend/index.html",
+          "characters": 296,
+          "sha256": "f54c3813b7737e114c1e656f341883df62c81aeaf513378693ee3e85b0ae3549",
+          "tokens": 94
+        },
+        {
+          "path": "frontend/package.json",
+          "characters": 520,
+          "sha256": "f952c226892aedb61aac48a56c98b9a93bcb30d9c2e88bd5f2bdd47853d4f925",
+          "tokens": 209
+        },
+        {
+          "path": "frontend/src/App.vue",
+          "characters": 6181,
+          "sha256": "955afd779751964c810ba04f08a739d2dee32d28789f9b474fc771faf90358a5",
+          "tokens": 1632
+        },
+        {
+          "path": "frontend/src/main.ts",
+          "characters": 111,
+          "sha256": "ae6eb9de53e72b97ee4c88fe88d2e982bf060266b2b82a0aa29ec859fa342019",
+          "tokens": 29
+        },
+        {
+          "path": "frontend/src/style.css",
+          "characters": 23,
+          "sha256": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+          "tokens": 7
+        },
+        {
+          "path": "frontend/src/vite-env.d.ts",
+          "characters": 186,
+          "sha256": "cb3a8a70a87f0b1872244cd0bbe5bb5ddd602d820b7766a4d515b04eab8c40c7",
+          "tokens": 44
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "characters": 407,
+          "sha256": "1c55a0cd5a28a0adf04a857a20c0aeeb1c4ec83394e37aa37f7466a095dafef9",
+          "tokens": 125
+        },
+        {
+          "path": "frontend/vite.config.ts",
+          "characters": 199,
+          "sha256": "6d294880f027abb84c4f63c1eb0de70272d90fb2f0f493a8a8cf259e3e5668be",
+          "tokens": 53
+        },
+        {
+          "path": "package.json",
+          "characters": 417,
+          "sha256": "771c81e6f942e1388a295c4222a85c56835fc75e2c08d93c7a364270a109d72b",
+          "tokens": 130
+        }
+      ]
+    }
+  ]
+}
