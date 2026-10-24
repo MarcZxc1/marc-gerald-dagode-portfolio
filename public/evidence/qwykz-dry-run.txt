@@ -1,0 +1,103 @@
+Qwykz 1.4.7 · captured 2026-10-24
+Source commit: 785a761de8e87521c4e36c0c4699c1318beaeecb
+Command: bunx qwykz@1.4.7 --preset express --name portfolio-api --dry-run --strict --yes
+
+╔══════════════════════════════════════════════════════╗
+  ║           qwykz  —  DRY RUN PREVIEW                 ║
+  ╚══════════════════════════════════════════════════════╝
+
+  Nothing will be written to disk. This is a preview only.
+
+  📁 Project Directory
+  ./portfolio-api/
+
+  🌳 Files That Would Be Created
+  ├── .env
+  ├── .qwykz-manifest.json
+  ├── AGENTS.md
+  ├── LEARN.md
+  ├── docker-compose.yml
+  ├── package.json
+  ├── prisma/
+  │   └── schema.prisma
+  ├── prisma.config.ts
+  ├── src/
+  │   ├── controllers/
+  │   │   ├── auth.controller.ts
+  │   │   └── user.controller.ts
+  │   ├── index.test.ts
+  │   ├── index.ts
+  │   ├── lib/
+  │   │   ├── prisma.ts
+  │   │   └── wait-for-postgres.ts
+  │   ├── middlewares/
+  │   │   ├── auth.middleware.ts
+  │   │   └── error.middleware.ts
+  │   ├── routes/
+  │   │   ├── auth.routes.ts
+  │   │   ├── health.routes.ts
+  │   │   └── user.routes.ts
+  │   └── services/
+  │       └── user.service.ts
+  └── tsconfig.json
+
+  ⚙️  Selected Stack
+  Framework   : express
+  Database    : docker
+  Auth        : local
+  Caching     : none
+  Extras      : zod, helmet, cors
+
+  📦 Packages That Would Be Added
+
+dependencies
+  ---------------------------------------------
+  Package             Version  Category   Reason
+  ---------------------------------------------
+  @prisma/adapter-pg  7.10.1   framework  Runtime dependency required by the generated express scaffold
+  @prisma/client      7.10.1   framework  Runtime dependency required by the generated express scaffold
+  argon2              0.41.1   auth       Required by the selected local authentication flow
+  cors                2.8.6    extra      Explicitly selected through --cors
+  dotenv              17.4.2   framework  Runtime dependency required by the generated express scaffold
+  express             5.2.1    framework  Runtime dependency required by the generated express scaffold
+  helmet              8.2.0    extra      Explicitly selected through --helmet
+  jsonwebtoken        9.0.2    auth       Required by the selected local authentication flow
+  pg                  8.21.0   framework  Runtime dependency required by the generated express scaffold
+  zod                 4.6.7    auth       Required by the selected local authentication flow
+  ---------------------------------------------
+devDependencies
+  ---------------------------------------------
+  Package              Version  Category  Reason
+  ---------------------------------------------
+  @prisma/config       7.10.1   dev       Development tooling required by the generated express scaffold
+  @types/bun           1.3.14   dev       Development tooling required by the generated express scaffold
+  @types/cors          2.8.19   extra     Explicitly selected through --cors
+  @types/express       5.0.6    dev       Development tooling required by the generated express scaffold
+  @types/jsonwebtoken  9.0.9    auth      Required by the selected local authentication flow
+  @types/node          25.9.3   dev       Development tooling required by the generated express scaffold
+  @types/pg            8.20.0   dev       Development tooling required by the generated express scaffold
+  prisma               7.10.1   dev       Development tooling required by the generated express scaffold
+  typescript           6.0.3    dev       Development tooling required by the generated express scaffold
+  ---------------------------------------------
+
+  📋 Scaffold Manifest (.qwykz-manifest.json)
+  {
+    "$schema": "https://qwykz.dev/manifest.schema.json",
+    "generator": {
+      "name": "qwykz",
+      "version": "1.4.7"
+    },
+    "scaffold": {
+      "framework": "express",
+      "preset": "api-express",
+      "dbTarget": "docker",
+      "authTarget": "local",
+      "cachingTarget": "none",
+      "frontendFramework": null,
+      "backendFramework": null,
+      "extraPackages": [
+        "zod",
+        "helmet",
+        "cors"
+      ]
+    },

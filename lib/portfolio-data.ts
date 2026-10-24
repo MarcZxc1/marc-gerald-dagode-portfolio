@@ -1,3 +1,5 @@
+import { qwykzDownloadEvidence } from "@/lib/project-evidence";
+
 export const profile = {
   name: "Marc Gerald Dagode",
   shortName: "Marc Gerald Dagode",
@@ -19,8 +21,8 @@ export const featuredProjects = [
     summary:
       "A fast TypeScript and Bun CLI that scaffolds configurable backend APIs, authentication presets, ORM integrations, and full-stack monorepos.",
     highlights: [
-      "1,763 peak weekly npm downloads",
-      "423 GitHub clones from 131 unique cloners in 14 days",
+      `${qwykzDownloadEvidence.peakDownloads.toLocaleString("en-US")} npm downloads · Jun 20–26, 2026`,
+      "Reproducible CLI walkthrough with file, dependency, and manifest previews",
       "Reusable presets for Supabase, Clerk, and traditional auth",
     ],
     stack: ["TypeScript", "Bun", "npm", "GitHub"],

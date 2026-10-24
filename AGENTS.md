@@ -13,7 +13,8 @@
 
 ```
 ├── __tests__/
-│   └── example.test.ts
+│   ├── health.test.ts
+│   └── contact.test.ts
 ├── app/
 │   ├── api/
 │   │   ├── contact/
@@ -31,7 +32,8 @@
 │   ├── site/
 │   └── ui/
 ├── lib/
-│   └── portfolio-data.ts
+│   ├── portfolio-data.ts
+│   └── project-evidence.ts
 ├── public/
 │   ├── marc-dagode-photo.png
 │   └── marc-dagode-illustrated.png

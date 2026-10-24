@@ -1287,6 +1287,154 @@ svg {
   text-align: center;
 }
 
+.case-study__copy > h3 {
+  margin-block: 32px 12px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
+}
+.evidence-facts {
+  margin: 28px 0;
+  border-top: 1px solid var(--border);
+}
+.evidence-facts > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: 20px;
+  padding-block: 14px;
+  border-bottom: 1px solid var(--border-muted);
+}
+.evidence-facts dt {
+  color: var(--foreground-subtle);
+  font-size: 12px;
+}
+.evidence-facts dd {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 13px;
+}
+.evidence-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+}
+.evidence-note,
+.case-study__copy > .evidence-note {
+  margin-top: 16px;
+  color: var(--foreground-subtle);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.evidence-note a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cli-walkthrough {
+  min-width: 0;
+  margin-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.cli-walkthrough__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding-block: 12px;
+  color: var(--foreground-subtle);
+  font-size: 10px;
+}
+.cli-walkthrough__meta .text-link {
+  font-size: 11px;
+}
+.cli-walkthrough__command {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.cli-walkthrough__command code {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.8;
+  user-select: all;
+}
+.cli-walkthrough__command .button {
+  flex-shrink: 0;
+  margin-left: auto;
+  font-size: 11px;
+}
+.cli-walkthrough__copy-status {
+  min-height: 22px;
+  margin-block: 6px 10px;
+  color: var(--foreground-muted);
+  font-size: 11px;
+}
+.cli-walkthrough__views {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.cli-walkthrough__views button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--foreground-muted);
+  font-size: 12px;
+  cursor: pointer;
+}
+.cli-walkthrough__views button[aria-pressed="true"] {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--foreground);
+}
+.cli-walkthrough__description {
+  min-height: 42px;
+  margin-block: 14px;
+  color: var(--foreground-muted);
+  font-size: 12px;
+}
+.cli-walkthrough pre {
+  max-width: 100%;
+  min-height: 360px;
+  max-height: 500px;
+  margin: 0;
+  padding: 20px;
+  overflow: auto;
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.8;
+  scrollbar-color: var(--border) var(--surface);
+  scrollbar-width: thin;
+}
+@media (max-width: 640px) {
+  .cli-walkthrough__command {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .cli-walkthrough__command .button {
+    margin-left: 0;
+  }
+  .evidence-facts > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
 @media (hover: hover) and (pointer: fine) {
   .site-nav a:hover,
   .site-footer a:hover,
