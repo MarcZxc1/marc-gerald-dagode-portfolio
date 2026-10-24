@@ -1,3 +1,12 @@
+import qwykzTokenCapture from "@/public/evidence/qwykz-token-estimate.json";
+
+export const qwykzTokenEvidence = {
+  approximateTokens: qwykzTokenCapture.approximateTokens,
+  fileCount: qwykzTokenCapture.fileCount,
+  encoding: qwykzTokenCapture.encoding,
+  snapshotHref: "/evidence/qwykz-token-estimate.json",
+} as const;
+
 export const qwykzDownloadEvidence = {
   capturedOn: "2026-10-24",
   sourceUrl:

@@ -44,6 +44,40 @@ The walkthrough does not claim to be a live execution service. Generated secrets
 and timestamps can differ between runs. Exact direct dependency declarations do
 not imply a locked transitive dependency graph.
 
+## Qwykz potential AI output-token savings
+
+- Source: the same clean Qwykz 1.4.7 commit and Express preset as the walkthrough.
+- Capture: `public/evidence/qwykz-token-estimate.json`.
+- Script: `scripts/capture-qwykz-tokens.mjs`.
+- Tokenizer: `js-tiktoken@1.0.21`, encoding `cl100k_base`.
+- Result: **3,109 tokens across 17 files**, displayed as **approximately 3,100**.
+- Method: tokenize each included file's full content and sum the counts. Include
+  source, tests, package declarations, Prisma, TypeScript, and Docker configuration.
+  Exclude `.env`, `.qwykz-manifest.json`, `AGENTS.md`, and `LEARN.md`.
+- Reproducibility: fix the database port at 54321 and Redis port at 63790; replace
+  the randomly generated Docker password with `<placeholder>` before tokenizing.
+  The snapshot records per-file counts and SHA-256 hashes of normalized content.
+
+This estimates potential output tokens avoided **if an AI would otherwise write
+the same scaffold files once**. It is not a measured AI-session comparison or a
+claim about total billable tokens, money, time, or every preset. Prompts, reasoning,
+retries, file paths, chat formatting, and tool overhead are outside the count.
+An AI may still read the generated files; different tokenizers produce different
+counts. No savings percentage is claimed.
+
+To reproduce, use a clean checkout of the recorded source commit. Install the
+measurement dependency in a temporary directory, outside the portfolio:
+
+```sh
+capture_dir=$(mktemp -d /tmp/portfolio-token-estimate-XXXXXX)
+bun add --cwd "$capture_dir" js-tiktoken@1.0.21
+bun scripts/capture-qwykz-tokens.mjs /path/to/qwykz "$capture_dir/node_modules/js-tiktoken"
+```
+
+The generator builds its plan in a temporary workspace and cleans it up; the
+script does not install scaffold dependencies or start a server. Only counts,
+hashes, and methodology are saved, with no generated credentials or file contents.
+
 ## Supply Chain Portal stock-concurrency case
 
 The implementation and its existing regression test were reviewed in the local
