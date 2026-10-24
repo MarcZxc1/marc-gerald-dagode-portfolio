@@ -5,6 +5,8 @@ import {
   ArrowUpRightIcon,
   GithubIcon,
 } from "@/components/ui/icons";
+import { QwykzWalkthrough } from "@/components/site/qwykz-walkthrough";
+import { qwykzDownloadEvidence } from "@/lib/project-evidence";
 import { featuredProjects } from "@/lib/portfolio-data";
 
 const project = featuredProjects.find(({ slug }) => slug === "qwykz")!;
@@ -73,6 +75,10 @@ export default function QwykzCaseStudyPage() {
               npm package
               <ArrowUpRightIcon />
             </a>
+            <Link className="button button--quiet" href="#walkthrough">
+              CLI walkthrough
+              <ArrowRightIcon />
+            </Link>
           </div>
         </div>
 
@@ -161,8 +167,25 @@ export default function QwykzCaseStudyPage() {
         </div>
       </section>
 
+      <section
+        aria-labelledby="qwykz-demo-title"
+        className="case-study__section"
+        id="walkthrough"
+      >
+        <p className="case-study__label">03 / Walkthrough</p>
+        <div className="case-study__copy">
+          <h2 id="qwykz-demo-title">Inspect a real scaffold preview.</h2>
+          <p>
+            Browse a recorded dry run of the Express preset. The file tree,
+            dependency audit, and manifest fields come from the CLI output. Copy
+            the pinned command to try the same configuration yourself.
+          </p>
+          <QwykzWalkthrough />
+        </div>
+      </section>
+
       <section className="case-study__section">
-        <p className="case-study__label">03 / Decisions</p>
+        <p className="case-study__label">04 / Decisions</p>
         <div className="case-study__copy">
           <h2>Speed needed guardrails.</h2>
           <p>
@@ -183,34 +206,71 @@ export default function QwykzCaseStudyPage() {
         </div>
       </section>
 
-      <section className="case-study__section">
-        <p className="case-study__label">04 / Outcome</p>
+      <section
+        aria-labelledby="qwykz-evidence-title"
+        className="case-study__section"
+        id="evidence"
+      >
+        <p className="case-study__label">05 / Evidence</p>
         <div className="case-study__copy">
-          <h2>A personal shortcut became an open-source product.</h2>
+          <h2 id="qwykz-evidence-title">A dated, inspectable usage signal.</h2>
           <p>
-            Real usage raised the standard for the project. The CLI needed
-            explicit capability boundaries, safer defaults, repeatable tests,
-            and documentation that could keep pace with each supported stack.
+            The public npm downloads API reports daily package downloads. In the
+            saved 365-day snapshot, the highest rolling seven-day total was{" "}
+            <strong>
+              {qwykzDownloadEvidence.peakDownloads.toLocaleString("en-US")}{" "}
+              downloads during June 20–26, 2026
+            </strong>
+            .
           </p>
-          <dl className="case-study__evidence">
+          <dl className="evidence-facts">
             <div>
-              <dt>1,763</dt>
-              <dd>peak weekly npm downloads</dd>
+              <dt>Reporting range</dt>
+              <dd>October 23, 2025 – October 22, 2026</dd>
             </div>
             <div>
-              <dt>423</dt>
-              <dd>GitHub clones over a 14-day snapshot</dd>
+              <dt>Retrieved</dt>
+              <dd>
+                <time dateTime={qwykzDownloadEvidence.capturedOn}>
+                  October 24, 2026
+                </time>
+              </dd>
             </div>
             <div>
-              <dt>131</dt>
-              <dd>unique cloners in the same snapshot</dd>
+              <dt>Method</dt>
+              <dd>
+                Sum each consecutive seven-day window; report the largest total
+                in this snapshot.
+              </dd>
             </div>
           </dl>
+          <div className="evidence-links">
+            <a
+              className="text-link"
+              href={qwykzDownloadEvidence.sourceUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              npm source data <ArrowUpRightIcon />
+            </a>
+            <a
+              className="text-link"
+              href={qwykzDownloadEvidence.snapshotHref}
+              download
+            >
+              Download saved snapshot <ArrowRightIcon />
+            </a>
+          </div>
+          <p className="evidence-note">
+            Downloads include automated and repeat installs. They do not measure
+            unique developers, active users, or production deployments. This is
+            a fixed historical snapshot.
+          </p>
         </div>
       </section>
 
       <section className="case-study__section case-study__section--last">
-        <p className="case-study__label">05 / Reflection</p>
+        <p className="case-study__label">06 / Reflection</p>
         <div className="case-study__copy">
           <h2>A generator has to earn trust.</h2>
           <blockquote>

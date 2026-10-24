@@ -1,0 +1,33 @@
+{
+  "title": "Stock adjustment concurrency regression",
+  "checkedOn": "2026-10-24",
+  "implementationCommit": "b3e79f4794acad63adabdeabab423656b546185e",
+  "implementationDate": "2026-10-20",
+  "sourceVisibility": "Internal repository. This is an anonymized verification summary, not a source-code export.",
+  "scenario": {
+    "startingStock": 10,
+    "concurrentDeductions": [
+      7,
+      7
+    ]
+  },
+  "assertions": [
+    "Exactly one adjustment succeeds; the other is rejected.",
+    "The balance is 3 units.",
+    "Only one stock ledger entry is written.",
+    "Transaction handlers for this product are serialized within the tested process.",
+    "Row-lock SQL is issued before the balance check."
+  ],
+  "verification": {
+    "runner": "Node.js test runner via tsx",
+    "selectedTests": 1,
+    "passed": 1,
+    "failed": 0,
+    "database": "Mocked Prisma operations; no live database connection."
+  },
+  "limitations": [
+    "No live PostgreSQL contention test performed for this portfolio verification.",
+    "No multi-process or multi-instance behavior verified.",
+    "No production throughput or performance claim is made."
+  ]
+}

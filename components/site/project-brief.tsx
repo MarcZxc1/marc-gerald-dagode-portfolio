@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { featuredProjects } from "@/lib/portfolio-data";
 
@@ -10,6 +11,7 @@ type ProjectBriefProps = {
   contribution: string;
   decisions: readonly { title: string; description: string }[];
   status: string;
+  children?: ReactNode;
 };
 
 export function ProjectBrief({
@@ -20,6 +22,7 @@ export function ProjectBrief({
   contribution,
   decisions,
   status,
+  children,
 }: ProjectBriefProps) {
   const project = featuredProjects.find((item) => item.slug === slug)!;
   return (
@@ -78,8 +81,9 @@ export function ProjectBrief({
           </div>
         </div>
       </section>
+      {children}
       <section className="case-study__section case-study__section--last">
-        <p className="case-study__label">03 / Status</p>
+        <p className="case-study__label">{children ? "04" : "03"} / Status</p>
         <div className="case-study__copy">
           <h2>Work in progress.</h2>
           <p>{status}</p>

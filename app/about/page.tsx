@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/site/page-intro";
 import { GitHubContributions } from "@/components/site/github-contributions";
@@ -87,6 +88,12 @@ export default function AboutPage() {
             </div>
           ))}
         </dl>
+        <Link
+          className="text-link"
+          href="/projects/supply-chain#engineering-case"
+        >
+          Read the stock-consistency case <ArrowUpRightIcon />
+        </Link>
       </section>
 
       <div className="about-activity">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/ui/icons";
+import { qwykzDownloadEvidence } from "@/lib/project-evidence";
 import { featuredProjects } from "@/lib/portfolio-data";
 
 export function SelectedWorkSection() {
@@ -41,7 +42,8 @@ export function SelectedWorkSection() {
               <p>{project.summary}</p>
               {project.slug === "qwykz" ? (
                 <p className="work-item__evidence">
-                  1,763 peak weekly npm downloads
+                  {qwykzDownloadEvidence.peakDownloads.toLocaleString("en-US")}{" "}
+                  npm downloads · Jun 20–26, 2026
                 </p>
               ) : null}
               <div className="work-item__bottom">
