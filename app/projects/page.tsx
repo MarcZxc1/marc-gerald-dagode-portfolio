@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             GitHub profile
           </LinkButton>
         }
-        description="A focused selection of developer tools and full-stack products. Each project starts with a concrete workflow and is shaped around reliability, security, and maintainability."
+        description="Developer tools, business applications, and university projects. A selection of what I build, the problems behind it, and where I contribute."
         eyebrow="Selected work"
         title="Things I’ve built."
       />
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
         <a href={profile.github} rel="noreferrer" target="_blank">
           GitHub
         </a>
-        . This page stays intentionally selective.
+        .
       </p>
     </main>
   );

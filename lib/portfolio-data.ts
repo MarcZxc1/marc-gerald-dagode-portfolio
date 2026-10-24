@@ -6,7 +6,7 @@ export const profile = {
   location: "Quezon City, Philippines",
   email: "dagodemarcgeraldarante@gmail.com",
   summary:
-    "I'm a Computer Science student and full-stack developer interested in finding simpler ways to solve problems. I use AI in my workflow to test ideas and ship sooner, while keeping the code reliable and easy to maintain.",
+    "I build web applications and developer tools, from the interface to the database. Currently a full-stack development intern at Microgenesis and a Computer Science student at Quezon City University.",
   github: "https://github.com/MarcZxc1",
   linkedin: "https://www.linkedin.com/in/marc-gerald-dagode-b5a018388",
 };
@@ -28,6 +28,40 @@ export const featuredProjects = [
     year: "2026",
     href: "https://github.com/MarcZxc1/qwykz",
     caseStudyHref: "/projects/qwykz",
+  },
+  {
+    slug: "supply-chain",
+    name: "Supply Chain Portal",
+    kicker: "Internship · SharePoint replacement",
+    summary:
+      "Replacing legacy SharePoint lists with a unified Supply Chain Portal for deliveries, dispatch, inventory, and proof of delivery. Built during my full-stack internship at Microgenesis.",
+    highlights: [
+      "Full-stack development and release coordination across a four-developer team",
+      "Role-based access, Microsoft sign-in, and auditable inventory transactions",
+      "Automated API and browser checks supporting staging releases",
+    ],
+    stack: ["React", "TypeScript", "Express", "PostgreSQL", "Prisma"],
+    status: "In development",
+    year: "2026",
+    href: null,
+    caseStudyHref: "/projects/supply-chain",
+  },
+  {
+    slug: "nutrimap",
+    name: "Nutrimap",
+    kicker: "Thesis · Nutrition surveillance",
+    summary:
+      "A nutrition-surveillance prototype connecting offline field data collection with a web dashboard and geospatial analysis. I lead system architecture and DevOps in an eight-person thesis team.",
+    highlights: [
+      "Proposed Flutter field app and React dashboard with a shared FastAPI backend",
+      "PostgreSQL and PostGIS for nutrition records and spatial analysis",
+      "Architecture, shared API contracts, and repeatable deployment planning",
+    ],
+    stack: ["React", "Flutter", "FastAPI", "PostgreSQL", "PostGIS"],
+    status: "In development",
+    year: "2026",
+    href: null,
+    caseStudyHref: "/projects/nutrimap",
   },
   {
     slug: "diffguard",
@@ -127,7 +161,15 @@ export const skillGroups = [
     title: "Delivery",
     description:
       "Repeatable environments and feedback loops from local development to release.",
-    skills: ["Git", "GitHub Actions", "Docker", "Linux", "Vercel", "Render"],
+    skills: [
+      "Git",
+      "GitHub Actions",
+      "Docker",
+      "Linux",
+      "Cloudflare Workers",
+      "Vercel",
+      "Render",
+    ],
   },
   {
     title: "Quality",
@@ -135,9 +177,61 @@ export const skillGroups = [
       "Automated checks at the unit, integration, and browser levels.",
     skills: ["Jest", "Vitest", "Pytest", "Playwright", "Zod"],
   },
+  {
+    title: "AI & knowledge workflows",
+    description:
+      "An Obsidian second brain, scoped context for AI tasks, and verification that feeds lessons back into the next session.",
+    skills: [
+      "Obsidian",
+      "Context engineering",
+      "AI task orchestration",
+      "Episodic & semantic memory",
+      "Architecture decision records",
+    ],
+  },
+] as const;
+
+export const workingMethods = [
+  {
+    title: "A second brain in Obsidian",
+    description:
+      "I connect daily logs, architecture decisions, bug postmortems, and project notes in an Obsidian vault. It gives me a place to recover the reasoning behind a change and carry lessons into the next project.",
+  },
+  {
+    title: "Episodic & semantic memory",
+    description:
+      "I use dated work logs and session histories as episodic memory: what happened, what I tried, and what changed. I turn reusable lessons into semantic memory: concepts, patterns, and technical references linked back to their sources.",
+  },
+  {
+    title: "Context engineering & AI orchestration",
+    description:
+      "Before using AI, I gather the relevant code, schemas, requirements, and decisions. I break work into scoped tasks with clear file ownership, use project guides and codebase indexes to supply context, then iterate through implementation and verification.",
+  },
+  {
+    title: "Verification & feedback loops",
+    description:
+      "I check generated code against the repository, review the diff, and run the relevant type, build, and test checks. I keep dated evidence separate from plans, then update decision records and postmortems so the next session starts with better context.",
+  },
 ] as const;
 
 export const resumeTimeline = [
+  {
+    period: "Sep 2026 — Present",
+    title: "Full-stack Development Intern",
+    organization:
+      "Microgenesis Business Systems · Digital Innovation Solutions",
+    description:
+      "Building a Supply Chain Portal to replace legacy SharePoint lists. Contributing across React, Express, and PostgreSQL, with responsibility for authentication, automated checks, and release coordination.",
+    type: "Experience",
+  },
+  {
+    period: "2026 — Present",
+    title: "Tech Lead, System Architect & DevOps Lead",
+    organization: "Nutrimap · University thesis",
+    description:
+      "Coordinating architecture, API contracts, and deployment planning for an eight-person team building a nutrition-surveillance prototype.",
+    type: "Thesis",
+  },
   {
     period: "2024 — Present",
     title: "Board of Programmers Member",

@@ -4,14 +4,15 @@ import { skillGroups } from "@/lib/portfolio-data";
 
 export const metadata: Metadata = {
   title: "Toolkit",
-  description: "Technologies and engineering practices Marc Gerald Dagode works with.",
+  description:
+    "Technologies and engineering practices Marc Gerald Dagode works with.",
 };
 
 export default function SkillsPage() {
   return (
     <main className="shell page">
       <PageIntro
-        description="The tools change. The goal stays the same: readable code, dependable systems, and a short path from an idea to something useful."
+        description="The languages, frameworks, and knowledge workflows I use to build, verify, and maintain software."
         eyebrow="Toolkit"
         title="How I build."
       />

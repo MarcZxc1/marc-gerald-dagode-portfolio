@@ -15,7 +15,11 @@ export function ResumeProject({ project }: ResumeProjectProps) {
         <div>
           <p>{project.kicker}</p>
           <h3>
-            <a href={project.href} rel="noreferrer" target="_blank">
+            <a
+              href={project.href ?? project.caseStudyHref ?? "/projects"}
+              rel="noreferrer"
+              target="_blank"
+            >
               {project.name}
               <ArrowUpRightIcon />
             </a>

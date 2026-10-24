@@ -56,7 +56,7 @@ export default function QwykzCaseStudyPage() {
           <div className="case-study__actions">
             <a
               className="button"
-              href={project.href}
+              href={project.href!}
               rel="noreferrer"
               target="_blank"
             >
@@ -87,7 +87,9 @@ export default function QwykzCaseStudyPage() {
           </div>
           <div>
             <dt>Status</dt>
-            <dd>{project.status} · {project.year}</dd>
+            <dd>
+              {project.status} · {project.year}
+            </dd>
           </div>
           <div>
             <dt>Stack</dt>
@@ -110,8 +112,8 @@ export default function QwykzCaseStudyPage() {
             Existing starters could save time, but they often replaced manual
             work with a different problem: trusting generated code without
             knowing why it was there. I built Qwykz to make the repeatable path
-            both faster and clearer—especially for learners and developers
-            using AI-assisted workflows.
+            both faster and clearer—especially for learners and developers using
+            AI-assisted workflows.
           </p>
         </div>
       </section>
@@ -150,7 +152,9 @@ export default function QwykzCaseStudyPage() {
               <span>04</span>
               <div>
                 <strong>Explain</strong>
-                <p>Record packages, decisions, and AI context in the project.</p>
+                <p>
+                  Record packages, decisions, and AI context in the project.
+                </p>
               </div>
             </li>
           </ol>

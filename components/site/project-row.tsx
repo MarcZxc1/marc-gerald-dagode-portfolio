@@ -28,7 +28,7 @@ export function ProjectRow({ project }: ProjectRowProps) {
       <a
         aria-label={`Open ${project.name} on GitHub`}
         className="project-row__link"
-        href={project.href}
+        href={project.href ?? project.caseStudyHref ?? "/projects"}
         rel="noreferrer"
         target="_blank"
       >
