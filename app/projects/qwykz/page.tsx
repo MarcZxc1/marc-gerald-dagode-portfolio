@@ -6,7 +6,7 @@ import {
   GithubIcon,
 } from "@/components/ui/icons";
 import { QwykzWalkthrough } from "@/components/site/qwykz-walkthrough";
-import { qwykzDownloadEvidence } from "@/lib/project-evidence";
+import { qwykzDownloadEvidence, qwykzTokenEvidence } from "@/lib/project-evidence";
 import { featuredProjects } from "@/lib/portfolio-data";
 
 const project = featuredProjects.find(({ slug }) => slug === "qwykz")!;
@@ -213,7 +213,7 @@ export default function QwykzCaseStudyPage() {
       >
         <p className="case-study__label">05 / Evidence</p>
         <div className="case-study__copy">
-          <h2 id="qwykz-evidence-title">A dated, inspectable usage signal.</h2>
+          <h2 id="qwykz-evidence-title">Usage and potential AI token savings.</h2>
           <p>
             The public npm downloads API reports daily package downloads. In the
             saved 365-day snapshot, the highest rolling seven-day total was{" "}
@@ -265,6 +265,35 @@ export default function QwykzCaseStudyPage() {
             Downloads include automated and repeat installs. They do not measure
             unique developers, active users, or production deployments. This is
             a fixed historical snapshot.
+          </p>
+          <h3>Less boilerplate for AI to write.</h3>
+          <p>
+            Using Qwykz could save an estimated{" "}
+            <strong>
+              ~{qwykzTokenEvidence.approximateTokens.toLocaleString("en-US")} AI
+              output tokens per Express scaffold
+            </strong>{" "}
+            if an AI would otherwise write the same files once. The CLI creates
+            the foundation so AI work can focus on application features.
+          </p>
+          <p>
+            The estimate counts the complete contents of{" "}
+            {qwykzTokenEvidence.fileCount} source, test, and configuration files
+            from the walkthrough’s Express preset using the{" "}
+            <code>{qwykzTokenEvidence.encoding}</code> tokenizer. Generated
+            documentation, the manifest, and the environment file are excluded.
+          </p>
+          <a
+            className="text-link"
+            href={qwykzTokenEvidence.snapshotHref}
+            download
+          >
+            Download token estimate and method <ArrowRightIcon />
+          </a>
+          <p className="evidence-note">
+            This is a scaffold-size estimate, not measured savings from an AI
+            session. Tokenizers and workflows vary. Prompts, reasoning, retries,
+            and tool overhead are excluded; AI may still read the generated files.
           </p>
         </div>
       </section>

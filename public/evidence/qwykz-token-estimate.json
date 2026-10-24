@@ -1,0 +1,129 @@
+{
+  "capturedOn": "2026-10-24",
+  "version": "1.4.7",
+  "sourceCommit": "785a761de8e87521c4e36c0c4699c1318beaeecb",
+  "sourceUrl": "https://github.com/MarcZxc1/qwykz/tree/785a761de8e87521c4e36c0c4699c1318beaeecb",
+  "preset": "api-express",
+  "projectName": "portfolio-api",
+  "fixedPorts": {
+    "database": 54321,
+    "redis": 63790
+  },
+  "tokenizer": "js-tiktoken@1.0.21",
+  "encoding": "cl100k_base",
+  "method": "Sum token counts of each included file's complete content, with the Docker password replaced by <placeholder>. No file paths, chat formatting, prompts, reasoning, retries, or tool overhead are counted.",
+  "interpretation": "Potential output tokens avoided if an AI would otherwise write the same scaffold files once. This is a scaffold-size proxy, not measured savings from an AI session. Other tokenizers and workflows will differ; an AI may still read the generated files.",
+  "excludedPaths": [
+    ".env",
+    ".qwykz-manifest.json",
+    "AGENTS.md",
+    "LEARN.md"
+  ],
+  "fileCount": 17,
+  "totalTokens": 3109,
+  "approximateTokens": 3100,
+  "files": [
+    {
+      "path": "docker-compose.yml",
+      "characters": 840,
+      "sha256": "8c15e31cd1d67921162754d6167d4a64f613c2e46da5590ff123b6b60f0d98f2",
+      "tokens": 250
+    },
+    {
+      "path": "package.json",
+      "characters": 1104,
+      "sha256": "3a026efeb80bd71e807de2dc26bed88ecf461cc042bd36b69c5abe1d53e5f1ae",
+      "tokens": 433
+    },
+    {
+      "path": "prisma.config.ts",
+      "characters": 204,
+      "sha256": "39821ee049b6b40cf9948fe2004e6a4f1774474bfcf4d8cda63f999be498c085",
+      "tokens": 50
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "characters": 370,
+      "sha256": "bcbfb218362cf9e4acb4d18a658f3da9b111ebc4d9e9e6ec43f4e090668806b2",
+      "tokens": 93
+    },
+    {
+      "path": "src/controllers/auth.controller.ts",
+      "characters": 2389,
+      "sha256": "224b66d0cf9ddf71a14b3aca325b3ad0436436c9c25005f46243ef09ea1be874",
+      "tokens": 589
+    },
+    {
+      "path": "src/controllers/user.controller.ts",
+      "characters": 750,
+      "sha256": "7523748a5041645ca201ff59373aba1f59a6428bb274e03b23d64aa8a40c3a58",
+      "tokens": 170
+    },
+    {
+      "path": "src/index.test.ts",
+      "characters": 170,
+      "sha256": "469fe61a8dcae0e7aa4a1a0eb36e280958d6557eb5fc6a6480712cfe40150856",
+      "tokens": 50
+    },
+    {
+      "path": "src/index.ts",
+      "characters": 1055,
+      "sha256": "64f7f0299a05290ee05180b0e7d781407be5cc0c62ed24c86a6f148096bb35cd",
+      "tokens": 240
+    },
+    {
+      "path": "src/lib/prisma.ts",
+      "characters": 701,
+      "sha256": "4efa0bc507f033a81087006a1074c63d75ef45aec254d7c0fd82a5a2668b7ef4",
+      "tokens": 177
+    },
+    {
+      "path": "src/lib/wait-for-postgres.ts",
+      "characters": 358,
+      "sha256": "d823613fc3c326257ef56fa1e477058a99807349387ac513bcc13e3726377bbd",
+      "tokens": 100
+    },
+    {
+      "path": "src/middlewares/auth.middleware.ts",
+      "characters": 1309,
+      "sha256": "f55437afbda7b46c6665c3e2e6b15804addb1b892a60ced539d9eaa32447cd80",
+      "tokens": 306
+    },
+    {
+      "path": "src/middlewares/error.middleware.ts",
+      "characters": 836,
+      "sha256": "125b18735eb43cbc4904280928bd13a543c54526934090db8463c684a4d8f0d5",
+      "tokens": 196
+    },
+    {
+      "path": "src/routes/auth.routes.ts",
+      "characters": 212,
+      "sha256": "f6eb6f0e7299a49707bf3ff795875d51e0a0edc571d6ee1a0b474f88d54a5526",
+      "tokens": 43
+    },
+    {
+      "path": "src/routes/health.routes.ts",
+      "characters": 353,
+      "sha256": "4093cee55a0f083842bdc4f29a9d98efa0239f8026f1677d83c4cc0e71263a95",
+      "tokens": 95
+    },
+    {
+      "path": "src/routes/user.routes.ts",
+      "characters": 368,
+      "sha256": "cd77110b2c17a7a36f23a887be4c38ee8b4c7bc9470ba33263faa825be87912f",
+      "tokens": 71
+    },
+    {
+      "path": "src/services/user.service.ts",
+      "characters": 510,
+      "sha256": "163cafda48f32aa66fac1b35642e333c72e70c83de41f8802cd1d7ce10c3b544",
+      "tokens": 131
+    },
+    {
+      "path": "tsconfig.json",
+      "characters": 382,
+      "sha256": "5f3da0cbe886d709293d58365b1b8c856d4111d258e5503952413ec764c1935c",
+      "tokens": 115
+    }
+  ]
+}
